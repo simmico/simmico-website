@@ -1,18 +1,19 @@
-I have a single HTML prototype file for a website called Simmico. This prototype uses JS to simulate multiple pages in one file. I need you to convert this into a proper multi-page static website ready for Cloudflare Pages.
-File structure:
+I have a single HTML prototype file for a website called Simmico. Convert it into a proper multi-page static website ready for Cloudflare Pages, with full responsive design for both mobile and desktop.
 
-Every page must be its own separate HTML file, not simulated with JavaScript
-index.html - Home page
-it/index.html - IT Services hub
-it/web-development.html - Web Development page
-it/app-development.html - App Development page
-it/ai-automation.html - AI & Automation page
-it/cloud-infrastructure.html - Cloud & Infrastructure page
-it/cybersecurity.html - Cybersecurity page
-it/support-admin.html - IT Support & Admin page
-it/software-integration.html - Software Integration page
-it/network-systems.html - Network & Systems page
-marketing/index.html - Marketing hub
+File Structure
+index.html
+about.html
+contact.html
+it/index.html
+it/web-development.html
+it/app-development.html
+it/ai-automation.html
+it/cloud-infrastructure.html
+it/cybersecurity.html
+it/support-admin.html
+it/software-integration.html
+it/network-systems.html
+marketing/index.html
 marketing/brand-strategy.html
 marketing/digital-marketing.html
 marketing/content-creation.html
@@ -21,21 +22,163 @@ marketing/seo-performance.html
 marketing/paid-advertising.html
 marketing/campaign-management.html
 marketing/photography-video.html
-about.html - About page
-contact.html - Contact page
 
-Shared files (used across every page):
+css/
+  base.css           ← reset, CSS variables, typography, shared utilities
+  layout.css         ← header, footer, bottom nav, top nav, dropdowns
+  components.css     ← cards, buttons, forms, badges, icons
+  home.css
+  about.css
+  contact.css
+  it-hub.css
+  it-service.css     ← shared styles for all IT detail pages
+  marketing-hub.css
+  marketing-service.css  ← shared styles for all marketing detail pages
 
-css/styles.css - all styling, one file
-js/app.js - navigation, bottom nav active state, PWA logic
-js/config.js - single source of truth for company name, phone, WhatsApp, email and all editable copy
-data/services.json - all service content as structured JSON
-manifest.json - PWA manifest
+js/
+  config.js          ← company info, phone, email, WhatsApp, tagline
+  nav.js             ← bottom nav active state, dropdown logic, mobile/desktop switching
+  pwa.js             ← service worker registration, install prompt
+  home.js
+  about.js
+  contact.js
+  it-hub.js
+  it-service.js      ← shared logic for all IT detail pages
+  marketing-hub.js
+  marketing-service.js
 
-Important details:
+data/
+  company.json       ← name, tagline, contact details, social links
+  it-services.json   ← all IT service entries
+  marketing-services.json  ← all marketing service entries
+  home.json          ← hero copy, value props, stats, CTA text
+  about.json         ← story, mission, values, team placeholders
+  contact.json       ← contact section labels, form field config, WhatsApp message template
+  it-hub.json        ← hub intro copy, section headings
+  marketing-hub.json ← hub intro copy, section headings
 
-The bottom navigation must persist across every page and highlight the correct active tab on every page
-Back buttons on service detail pages must link to the correct parent hub page
-All internal links must be proper href links between HTML files, no JavaScript page switching
-The design, dark mode, colours, fonts and all copy must stay exactly as in the prototype
-The config.js and services.json must be the single source of truth. Changing a phone number or service description there updates it everywhere
+manifest.json
+sw.js
+_redirects
+
+Architecture Principle — Separation of Concerns
+Every page loads only what it needs. The loading order on every HTML file must be:
+html<!-- 1. Shared base styles -->
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+
+<!-- 2. Page-specific styles -->
+<link rel="stylesheet" href="/css/home.css">   <!-- only on index.html -->
+
+<!-- 3. Shared config (always first JS) -->
+<script src="/js/config.js"></script>
+
+<!-- 4. Page-specific data + logic -->
+<script src="/js/home.js" defer></script>
+
+<!-- 5. Shared nav (always last) -->
+<script src="/js/nav.js" defer></script>
+If you need to change the hero headline on the home page, you edit data/home.json only. If you need to change card layout for IT service detail pages, you edit css/it-service.css only. No hunting.
+
+Data Files — Structure
+data/company.json
+json{
+  "name": "Simmico",
+  "tagline": "...",
+  "phone": "+27...",
+  "whatsapp": "+27...",
+  "email": "hello@simmico.co.za",
+  "address": "...",
+  "social": {
+    "linkedin": "",
+    "instagram": "",
+    "facebook": ""
+  }
+}
+data/it-services.json and data/marketing-services.json — each entry:
+json{
+  "id": "web-development",
+  "title": "Web Development",
+  "slug": "web-development",
+  "icon": "🌐",
+  "shortDescription": "One line for hub cards",
+  "hero": "2–3 sentence intro for the detail page hero",
+  "features": ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
+  "process": [
+    { "step": 1, "title": "Discovery", "description": "..." },
+    { "step": 2, "title": "Build", "description": "..." },
+    { "step": 3, "title": "Launch", "description": "..." }
+  ],
+  "audience": "Who this service is for — 1–2 sentences",
+  "cta": "Custom CTA button label"
+}
+data/home.json
+json{
+  "hero": {
+    "headline": "...",
+    "subheadline": "...",
+    "primaryCTA": { "label": "Explore IT Services", "href": "/it/" },
+    "secondaryCTA": { "label": "Get in Touch", "href": "/contact.html" }
+  },
+  "valueProps": [
+    { "icon": "⚡", "title": "...", "description": "..." }
+  ],
+  "stats": [
+    { "value": "50+", "label": "Clients Served" }
+  ]
+}
+data/about.json, data/contact.json, data/it-hub.json, data/marketing-hub.json — same pattern: all visible copy lives in the JSON, JS reads it and renders it into the HTML shell.
+
+JavaScript Files — Responsibilities
+FileResponsibilityconfig.jsExports CONFIG object; must be loaded first on every pagenav.jsBottom nav active state, desktop dropdown hover, WhatsApp link builder from configpwa.jsSW registration, install prompt handlinghome.jsFetches home.json + it-services.json + marketing-services.json, renders hero, value props, service preview cardsabout.jsFetches about.json, renders story, mission, values cardscontact.jsFetches contact.json + company.json, renders contact details, builds WhatsApp URLit-hub.jsFetches it-hub.json + it-services.json, renders all IT service cardsit-service.jsReads current page slug from URL, fetches it-services.json, finds matching entry, renders full detail pagemarketing-hub.jsSame pattern for marketingmarketing-service.jsSame pattern for marketing detail pages
+All detail pages (it/web-development.html, etc.) use identical HTML shells — the slug in the URL determines which data gets loaded. You never need to edit the HTML of a detail page to change its content.
+
+CSS Files — Responsibilities
+FileWhat goes in itbase.cssCSS custom properties (colour palette, spacing scale, font stack), reset, body/html defaults, typography scalelayout.cssTop nav, bottom nav, dropdowns, page wrapper, header, footer — everything structural that appears on every pagecomponents.cssService cards, buttons (primary/secondary/ghost), form inputs, badges, section headings, CTA blocks, step indicatorshome.cssHero section, stats bar, home-specific grid overridesabout.cssValues card grid, team section, mission blockcontact.cssContact form layout, contact detail list, WhatsApp buttonit-hub.cssIT hub intro block, card grid overrides specific to ITit-service.cssDetail page hero, features list, process steps, audience block — shared by all IT detail pagesmarketing-hub.cssSame for marketing hubmarketing-service.cssSame for marketing detail pages
+All colour variables, font sizes, and spacing tokens are defined only in base.css. No hex codes or pixel values hardcoded anywhere else — use var(--color-primary) etc. throughout.
+
+Navigation — Two Separate Systems
+Mobile (< 768px):
+
+Persistent bottom navigation bar on every page: Home, IT Services, Marketing, About, Contact
+Active tab highlighted based on current URL path — handled entirely by nav.js
+Hub pages serve as landing menus — service cards link to detail pages
+No hamburger menu; bottom nav is the only global nav
+Bottom nav markup lives in every HTML file (or injected by nav.js)
+
+Desktop (≥ 768px):
+
+Sticky top horizontal nav bar
+"IT Services" and "Marketing" are CSS-first dropdown menus (JS toggle as fallback), listing all child pages
+Bottom nav hidden via layout.css media query — no JS required to hide it
+Logo left, nav links right
+Dropdown link list is generated by nav.js reading from it-services.json and marketing-services.json so adding a new service auto-adds it to the dropdown
+
+
+Content Requirements
+No lorem ipsum. Every page fully written:
+
+Home: Hero, why-Simmico value props (4 items), IT + Marketing service preview grids, stats strip, footer
+IT & Marketing hubs: Division intro paragraph, full service card grid (icon + name + one-liner + link), "Let's talk" CTA section
+Each service detail page: Hero with intro, "What we offer" (5–6 features), "How it works" (3–4 steps), "Who this is for", CTA to contact
+About: Company story (2–3 paragraphs), mission statement, values (4 cards), team placeholder section
+Contact: WhatsApp CTA, phone, email, address (all from company.json), HTML contact form with Formspree placeholder action
+
+
+Routing & PWA
+
+_redirects: catch-all to index.html for Cloudflare Pages
+manifest.json: valid PWA manifest, colours matching the prototype palette
+
+
+Technical Requirements
+
+All internal links are proper href paths — zero JS page switching
+Back buttons on detail pages link to ../it/ or ../marketing/
+No external CSS frameworks or JS libraries — vanilla only
+Valid HTML5, proper <meta> tags on every page (charset, viewport, description, og:title, og:description)
+Changing copy: edit the relevant JSON file only
+Changing a colour: edit base.css only
+Changing a layout: edit the relevant CSS file only
+Changing business logic: edit the relevant JS file only

@@ -1,0 +1,11 @@
+{
+  "badge": "IT Services",
+  "title": "Full-stack IT,\nfront to back.",
+  "body": "From keeping your systems running to building what comes next — we cover every layer of your technology needs. Infrastructure, development, security and support, all in one place.",
+  "cta": {
+    "heading": "Ready to talk tech?",
+    "body": "Tell us where you are and where you want to be. We'll figure out the rest.",
+    "buttonLabel": "Get in touch",
+    "href": "/contact.html"
+  }
+}

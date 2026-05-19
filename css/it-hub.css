@@ -1,0 +1,62 @@
+/* ============================================================
+   IT HUB — intro block, card grid
+   ============================================================ */
+
+.hub-hero {
+  padding: 28px 24px 24px;
+  background: var(--color-white);
+}
+
+.hub-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1.15;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+  white-space: pre-line;
+}
+
+.hub-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.services-grid {
+  padding: 8px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hub-cta {
+  padding: 8px 24px 32px;
+}
+
+@media (min-width: 768px) {
+  .hub-hero {
+    padding: 48px 40px 36px;
+    max-width: var(--content-max);
+    margin: 0 auto;
+  }
+
+  .hub-title  { font-size: 36px; }
+  .hub-desc   { max-width: 600px; font-size: 15px; }
+
+  .services-grid {
+    padding: 0 40px 40px;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .hub-cta {
+    padding: 0 40px 56px;
+    max-width: var(--content-max);
+    margin: 0 auto;
+  }
+}

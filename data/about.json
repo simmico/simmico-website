@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Who we are",
+    "body": "Simmico bridges the gap between IT and Marketing. Most businesses deal with two separate vendors, two separate strategies, and gaps in between. We fix that."
+  },
+  "story": [
+    "We started because we kept seeing the same problem: businesses hiring one agency for their website and another for their campaigns, then wondering why neither talked to the other. The tech team didn't understand the brand. The marketing team didn't understand the stack. Things fell through the cracks.",
+    "Simmico was built to close that gap. One team that handles both sides — the infrastructure and the identity, the systems and the strategy. When everything is managed together, it works together.",
+    "We're a South African team delivering full-coverage IT and marketing services for businesses that want to grow without the complexity. No silos. No handoff failures. Just clear thinking and solid execution."
+  ],
+  "mission": "To give every business access to integrated IT and marketing expertise — delivered simply, built to last, and managed under one roof.",
+  "values": [
+    {
+      "title": "No unnecessary complexity",
+      "body": "We give you what you need, explain it clearly, and don't overcomplicate the bill."
+    },
+    {
+      "title": "Both sides of the business",
+      "body": "Your website, your systems, your brand and your campaigns all live under one roof."
+    },
+    {
+      "title": "Built to last",
+      "body": "We build solutions that hold up — not quick fixes that need replacing in six months."
+    },
+    {
+      "title": "Straight talk",
+      "body": "You get honest advice, clear timelines and real answers. Always."
+    }
+  ],
+  "stats": [
+    { "value": "2-in-1", "label": "IT + Marketing" },
+    { "value": "100%", "label": "In-house delivery" },
+    { "value": "16+", "label": "Service areas" },
+    { "value": "0", "label": "Gaps in coverage" }
+  ],
+  "team": {
+    "heading": "The team",
+    "body": "A small, focused group of people who care about the work. We're building something worth being proud of.",
+    "placeholder": "Team profiles coming soon."
+  }
+}

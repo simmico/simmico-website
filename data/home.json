@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "eyebrow": "Welcome",
+    "headline": "IT and Marketing,",
+    "headlineAccent": "handled.",
+    "body": "We run the full stack — from infrastructure and development to brand strategy and campaigns. One team, two disciplines, no gaps.",
+    "tagline": "One company. Two disciplines. Full coverage.",
+    "primaryCTA": { "label": "Explore IT Services", "href": "/it/" },
+    "secondaryCTA": { "label": "About us", "href": "/about.html" }
+  },
+  "valueProps": [
+    {
+      "icon": "⚡",
+      "title": "One team, two disciplines",
+      "description": "IT and Marketing under one roof means no miscommunication, no gaps, no finger-pointing."
+    },
+    {
+      "icon": "🔧",
+      "title": "Full in-house delivery",
+      "description": "Every service is delivered by our own people. No outsourcing, no freelancer relay."
+    },
+    {
+      "icon": "📐",
+      "title": "Built to last",
+      "description": "We design for longevity — systems that scale and strategies that compound."
+    },
+    {
+      "icon": "💬",
+      "title": "Straight talk, always",
+      "description": "Clear timelines, honest advice and real answers. We don't hide behind jargon."
+    }
+  ],
+  "stats": [
+    { "value": "2-in-1", "label": "IT + Marketing" },
+    { "value": "100%", "label": "In-house delivery" },
+    { "value": "16+", "label": "Service areas" },
+    { "value": "0", "label": "Gaps in coverage" }
+  ]
+}
