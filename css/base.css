@@ -3,21 +3,32 @@
    ============================================================ */
 
 :root {
-  /* Colour palette */
+  /* Brand colours (unchanged) */
   --color-teal:          #72c9bf;
   --color-teal-dark:     #5ab3a9;
-  --color-teal-light:    #e8f8f7;
+  --color-teal-light:    #1e3a38;
   --color-coral:         #e8845c;
   --color-coral-dark:    #c96a3f;
-  --color-simmi-grey:    #5c5d5f;
-  --color-dark:          #1f2b33;
-  --color-bg:            #f7f8f9;
-  --color-white:         #ffffff;
-  --color-border:        #e8eaec;
-  --color-text-primary:  #1f2b33;
-  --color-text-secondary:#5c5d5f;
-  --color-text-muted:    #9aa5ad;
+  --color-simmi-grey:    #8a9ba8;
   --color-whatsapp:      #25d366;
+
+  /* Dark mode palette */
+  --color-dark:          #0e1a21;
+  --color-surface:       #152028;
+  --color-surface-2:     #1c2d38;
+  --color-surface-3:     #243545;
+  --color-white:         #1c2d38;
+
+  /* Semantic colour aliases */
+  --color-bg:            #0e1a21;
+  --color-card:          #152028;
+  --color-card-hover:    #1c2d38;
+  --color-border:        #243545;
+
+  /* Text */
+  --color-text-primary:  #e8edf0;
+  --color-text-secondary:#8a9ba8;
+  --color-text-muted:    #556878;
 
   /* Spacing scale */
   --space-1: 4px;
@@ -97,7 +108,7 @@ ul, ol {
 /* Typography scale */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   line-height: 1.15;
   letter-spacing: -0.3px;
 }

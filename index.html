@@ -55,7 +55,9 @@
   <main class="main-content">
 
     <!-- Hero (rendered by home.js) -->
-    <section class="hero" id="hero-content"></section>
+<div class="hero-wrapper">
+  <section class="hero" id="hero-content"></section>
+</div>
 
     <!-- Install banner (hidden until PWA prompt) -->
     <div id="install-banner" class="install-banner" style="display:none;" onclick="installApp()">
@@ -75,10 +77,12 @@
     <div class="stats-grid" id="stats-content"></div>
 
     <!-- Value props -->
-    <section class="value-props-section">
-      <div class="value-props-title">Why Simmico</div>
-      <div class="value-props-grid" id="value-props-content"></div>
-    </section>
+<div class="value-props-wrapper">
+  <section class="value-props-section">
+    <div class="value-props-title">Why Simmico</div>
+    <div class="value-props-grid" id="value-props-content"></div>
+  </section>
+</div>
 
     <!-- IT Services preview -->
     <section class="home-section">
