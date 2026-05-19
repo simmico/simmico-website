@@ -1,0 +1,41 @@
+I have a single HTML prototype file for a website called Simmico. This prototype uses JS to simulate multiple pages in one file. I need you to convert this into a proper multi-page static website ready for Cloudflare Pages.
+File structure:
+
+Every page must be its own separate HTML file, not simulated with JavaScript
+index.html - Home page
+it/index.html - IT Services hub
+it/web-development.html - Web Development page
+it/app-development.html - App Development page
+it/ai-automation.html - AI & Automation page
+it/cloud-infrastructure.html - Cloud & Infrastructure page
+it/cybersecurity.html - Cybersecurity page
+it/support-admin.html - IT Support & Admin page
+it/software-integration.html - Software Integration page
+it/network-systems.html - Network & Systems page
+marketing/index.html - Marketing hub
+marketing/brand-strategy.html
+marketing/digital-marketing.html
+marketing/content-creation.html
+marketing/social-media.html
+marketing/seo-performance.html
+marketing/paid-advertising.html
+marketing/campaign-management.html
+marketing/photography-video.html
+about.html - About page
+contact.html - Contact page
+
+Shared files (used across every page):
+
+css/styles.css - all styling, one file
+js/app.js - navigation, bottom nav active state, PWA logic
+js/config.js - single source of truth for company name, phone, WhatsApp, email and all editable copy
+data/services.json - all service content as structured JSON
+manifest.json - PWA manifest
+
+Important details:
+
+The bottom navigation must persist across every page and highlight the correct active tab on every page
+Back buttons on service detail pages must link to the correct parent hub page
+All internal links must be proper href links between HTML files, no JavaScript page switching
+The design, dark mode, colours, fonts and all copy must stay exactly as in the prototype
+The config.js and services.json must be the single source of truth. Changing a phone number or service description there updates it everywhere
