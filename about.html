@@ -1,132 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#72c9bf">
-<meta name="description" content="About Simmico — the team that bridges IT and Marketing under one roof.">
-<meta property="og:title" content="About Simmico">
-<meta property="og:description" content="We bridge IT and Marketing. One team, one strategy, no gaps.">
-<meta property="og:type" content="website">
-<title>About — Simmico</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/layout.css">
-<link rel="stylesheet" href="/css/components.css">
-<link rel="stylesheet" href="/css/about.css">
-
-<script src="/js/config.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Simmico — who we are, why we exist, and what we stand for.">
+  <meta property="og:title" content="About Simmico">
+  <meta name="theme-color" content="#72c9bf">
+  <title>About — Simmico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="manifest" href="/manifest.json">
 </head>
 <body>
 
-<div class="page-wrapper">
+<header class="desktop-header">
+  <nav class="desktop-nav">
+    <a href="/index.html" class="nav-logo"><span class="lp">Simmi</span><span class="ls">co</span></a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="/it/index.html">IT Services <span class="dropdown-arrow">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/it/web-development.html">Web Development</a></li>
+          <li><a href="/it/app-development.html">App Development</a></li>
+          <li><a href="/it/ai-automation.html">AI &amp; Automation</a></li>
+          <li><a href="/it/cloud-infrastructure.html">Cloud &amp; Infrastructure</a></li>
+          <li><a href="/it/cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="/it/support-admin.html">IT Support &amp; Admin</a></li>
+          <li><a href="/it/software-integration.html">Software Integration</a></li>
+          <li><a href="/it/network-systems.html">Network &amp; Systems</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/marketing/index.html">Marketing <span class="dropdown-arrow">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/marketing/brand-strategy.html">Brand Strategy</a></li>
+          <li><a href="/marketing/digital-marketing.html">Digital Marketing</a></li>
+          <li><a href="/marketing/content-creation.html">Content Creation</a></li>
+          <li><a href="/marketing/social-media.html">Social Media</a></li>
+          <li><a href="/marketing/seo-performance.html">SEO Performance</a></li>
+          <li><a href="/marketing/paid-advertising.html">Paid Advertising</a></li>
+          <li><a href="/marketing/campaign-management.html">Campaign Management</a></li>
+          <li><a href="/marketing/photography-video.html">Photography &amp; Video</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Desktop top nav -->
-  <nav class="top-nav">
-    <div class="top-nav-inner">
-      <a href="/" class="logo-mark"><span class="simmi">Simmi</span><span class="co">co</span></a>
-      <div class="top-nav-links">
-        <div class="top-nav-item">
-          <a href="/it/" class="top-nav-link has-dropdown">IT Services</a>
-          <div class="dropdown" id="dropdown-it"></div>
-        </div>
-        <div class="top-nav-item">
-          <a href="/marketing/" class="top-nav-link has-dropdown">Marketing</a>
-          <div class="dropdown" id="dropdown-mkt"></div>
-        </div>
-        <a href="/about.html" class="top-nav-link">About</a>
-        <a href="/contact.html" class="btn btn-primary" style="font-size:13px;padding:10px 18px;">Get in touch</a>
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1>About Simmico</h1>
+    <p class="intro">We started from a straightforward observation: most businesses manage their IT and their marketing as completely separate problems, handled by separate vendors with no coordination between them. We built Simmico to fix that.</p>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="section">
+  <div class="container">
+    <div style="max-width:720px;">
+      <span class="section-label">Our story</span>
+      <h2 style="margin-bottom:1.5rem;">The gap between IT and Marketing costs businesses real money</h2>
+      <p style="margin-bottom:1.25rem; font-size:1rem; line-height:1.8;">When a business builds a new website, the development team focuses on code and infrastructure. The marketing team focuses on messaging and conversion. In most cases, these two groups don't share a brief, don't agree on priorities, and finish with a product that satisfies neither side.</p>
+      <p style="margin-bottom:1.25rem; font-size:1rem; line-height:1.8;">That's a structural problem, not a personnel one. And it repeats across every project — cybersecurity decisions made without considering how marketing tools handle data, automation built without understanding the campaigns it's supposed to support, social media managed by someone who has no visibility into the CRM it's supposed to feed.</p>
+      <p style="font-size:1rem; line-height:1.8;">Simmico operates across both domains. Our IT and marketing capability is under the same roof, which means projects are briefed once, coordinated properly, and delivered without the gaps that come from managing two separate vendor relationships.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="section-sm" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div style="max-width:680px; margin:0 auto; text-align:center;">
+      <span class="section-label">Our mission</span>
+      <h2 style="margin-bottom:1rem;">"Handle the technology and marketing of growing businesses as a single, coordinated function."</h2>
+      <p>Not two separate services bolted together. One capability, one team, one relationship.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">What we stand for</span>
+    <h2 style="margin-bottom:2.5rem;">Our values</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <h4>Clarity over complexity</h4>
+        <p>We explain what we're doing and why. No jargon, no black boxes. You should always know what's happening with your systems and campaigns.</p>
+      </div>
+      <div class="value-card">
+        <h4>Scope discipline</h4>
+        <p>We define what we're delivering before we start. Scope creep is usually a briefing failure. We take the brief seriously.</p>
+      </div>
+      <div class="value-card">
+        <h4>Practical over impressive</h4>
+        <p>The best solution is the one that solves the problem reliably, not the most technically interesting one. We build things that work and are maintainable.</p>
+      </div>
+      <div class="value-card">
+        <h4>Long-term thinking</h4>
+        <p>We're not interested in short-term fixes that create bigger problems later. Every recommendation is made with the next two years in mind, not just the next sprint.</p>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Mobile header -->
-  <header class="mobile-header">
-    <a href="/" class="logo-mark"><span class="simmi">Simmi</span><span class="co">co</span></a>
-  </header>
-
-  <main class="main-content">
-
-    <!-- Hero -->
-    <section class="about-hero" id="about-hero-content"></section>
-
-    <!-- Stats -->
-    <div class="stats-grid" id="stats-content"></div>
-
-    <!-- Story -->
-    <section class="story-section" id="story-content"></section>
-
-    <!-- Mission -->
-    <div class="mission-block" id="mission-content"></div>
-
-    <!-- Values -->
-    <section class="values-section">
-      <div class="values-title">How we work</div>
-      <div class="values-grid" id="values-content"></div>
-    </section>
-
-    <!-- Team -->
-    <section class="team-section" id="team-content"></section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-inner">
-      <a href="/" class="footer-logo logo-mark"><span class="simmi">Simmi</span><span class="co">co</span></a>
-      <div class="footer-tagline">One company. Two disciplines. Full coverage.</div>
-      <div class="footer-links">
-        <a href="/it/" class="footer-link">IT Services</a>
-        <a href="/marketing/" class="footer-link">Marketing</a>
-        <a href="/about.html" class="footer-link">About</a>
-        <a href="/contact.html" class="footer-link">Contact</a>
+<!-- Team Placeholder -->
+<section class="section" style="background:var(--surface); border-top:1px solid var(--border);">
+  <div class="container">
+    <span class="section-label">Our team</span>
+    <h2 style="margin-bottom:1rem;">People who know both sides</h2>
+    <p style="max-width:560px; margin-bottom:3rem;">The Simmico team combines technical and creative disciplines. We don't outsource to generalists when depth is needed — the people on your project are the people who know the domain.</p>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="card" style="text-align:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(114,201,191,0.12);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;color:var(--primary);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="30" height="30"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h4 style="margin-bottom:0.25rem;">IT Division</h4>
+        <p style="font-size:0.85rem;">Engineering and infrastructure specialists</p>
       </div>
-      <div class="footer-bottom">&copy; 2025 Simmico. All rights reserved.</div>
+      <div class="card" style="text-align:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(232,132,92,0.1);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;color:var(--accent);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="30" height="30"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h4 style="margin-bottom:0.25rem;">Marketing Division</h4>
+        <p style="font-size:0.85rem;">Brand, content, and growth specialists</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(114,201,191,0.08);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;color:var(--primary);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="30" height="30"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4 style="margin-bottom:0.25rem;">Account Management</h4>
+        <p style="font-size:0.85rem;">Your single point of contact</p>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Bottom nav -->
-  <nav class="bottom-nav">
-    <a href="/" class="nav-item" data-section="home">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+<!-- CTA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-block">
+      <h2>Work with us</h2>
+      <p>Tell us what your business needs and we'll put together a clear proposal.</p>
+      <div class="cta-actions">
+        <a href="/contact.html" class="btn btn-primary btn-lg">Get in touch</a>
+        <a href="/it/index.html" class="btn btn-outline btn-lg">IT Services</a>
+        <a href="/marketing/index.html" class="btn btn-outline btn-lg">Marketing Services</a>
       </div>
-      <span class="nav-label">Home</span>
-    </a>
-    <a href="/it/" class="nav-item" data-section="it">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-      </div>
-      <span class="nav-label">IT</span>
-    </a>
-    <a href="/marketing/" class="nav-item" data-section="marketing">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-      </div>
-      <span class="nav-label">Marketing</span>
-    </a>
-    <a href="/about.html" class="nav-item" data-section="about">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-      </div>
-      <span class="nav-label">About</span>
-    </a>
-    <a href="/contact.html" class="nav-item" data-section="contact">
-      <div class="nav-icon">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 13a19.79 19.79 0 01-3.07-8.67A2 2 0 012.85 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      </div>
-      <span class="nav-label">Contact</span>
-    </a>
-  </nav>
+    </div>
+  </div>
+</section>
 
-</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="flogo"><span class="lp">Simmi</span><span class="ls">co</span></div>
+        <p>IT and Marketing, built as one. One partner for your technology and growth needs.</p>
+      </div>
+      <div class="footer-col">
+        <h5>IT Services</h5>
+        <ul>
+          <li><a href="/it/web-development.html">Web Development</a></li>
+          <li><a href="/it/app-development.html">App Development</a></li>
+          <li><a href="/it/ai-automation.html">AI &amp; Automation</a></li>
+          <li><a href="/it/cloud-infrastructure.html">Cloud &amp; Infrastructure</a></li>
+          <li><a href="/it/cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="/it/support-admin.html">IT Support &amp; Admin</a></li>
+          <li><a href="/it/software-integration.html">Software Integration</a></li>
+          <li><a href="/it/network-systems.html">Network &amp; Systems</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Marketing</h5>
+        <ul>
+          <li><a href="/marketing/brand-strategy.html">Brand Strategy</a></li>
+          <li><a href="/marketing/digital-marketing.html">Digital Marketing</a></li>
+          <li><a href="/marketing/content-creation.html">Content Creation</a></li>
+          <li><a href="/marketing/social-media.html">Social Media</a></li>
+          <li><a href="/marketing/seo-performance.html">SEO Performance</a></li>
+          <li><a href="/marketing/paid-advertising.html">Paid Advertising</a></li>
+          <li><a href="/marketing/campaign-management.html">Campaign Management</a></li>
+          <li><a href="/marketing/photography-video.html">Photography &amp; Video</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/it/index.html">IT Hub</a></li>
+          <li><a href="/marketing/index.html">Marketing Hub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footer-year"></span> <span data-cfg="companyName">Simmico</span>. All rights reserved.</p>
+      <a href="#" data-mailto>hello@simmico.co.za</a>
+    </div>
+  </div>
+</footer>
 
-<script src="/js/about.js" defer></script>
-<script src="/js/nav.js" defer></script>
-<script src="/js/pwa.js" defer></script>
+<nav class="bottom-nav" aria-label="Main navigation">
+  <a href="/index.html" class="bnav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="/it/index.html" class="bnav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    <span>IT</span>
+  </a>
+  <a href="/marketing/index.html" class="bnav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+    <span>Marketing</span>
+  </a>
+  <a href="/about.html" class="bnav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    <span>About</span>
+  </a>
+  <a href="/contact.html" class="bnav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span>Contact</span>
+  </a>
+</nav>
+
+<script src="/js/config.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>

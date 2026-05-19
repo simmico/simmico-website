@@ -1,0 +1,134 @@
+{
+  "it": [
+    {
+      "id": "web-development",
+      "title": "Web Development",
+      "slug": "it/web-development.html",
+      "division": "it",
+      "icon": "web",
+      "shortDescription": "Custom websites and web applications built for performance, usability, and long-term maintainability."
+    },
+    {
+      "id": "app-development",
+      "title": "App Development",
+      "slug": "it/app-development.html",
+      "division": "it",
+      "icon": "app",
+      "shortDescription": "Native and cross-platform mobile applications, from first screen to app store listing."
+    },
+    {
+      "id": "ai-automation",
+      "title": "AI & Automation",
+      "slug": "it/ai-automation.html",
+      "division": "it",
+      "icon": "ai",
+      "shortDescription": "Workflow automation and AI integrations that remove manual work and surface better decisions."
+    },
+    {
+      "id": "cloud-infrastructure",
+      "title": "Cloud & Infrastructure",
+      "slug": "it/cloud-infrastructure.html",
+      "division": "it",
+      "icon": "cloud",
+      "shortDescription": "Secure, scalable cloud environments designed around your workloads and budget."
+    },
+    {
+      "id": "cybersecurity",
+      "title": "Cybersecurity",
+      "slug": "it/cybersecurity.html",
+      "division": "it",
+      "icon": "security",
+      "shortDescription": "Practical security measures built around your actual risk profile, not generic checklists."
+    },
+    {
+      "id": "support-admin",
+      "title": "IT Support & Admin",
+      "slug": "it/support-admin.html",
+      "division": "it",
+      "icon": "support",
+      "shortDescription": "Day-to-day IT handled for you — helpdesk, devices, licensing, and user management."
+    },
+    {
+      "id": "software-integration",
+      "title": "Software Integration",
+      "slug": "it/software-integration.html",
+      "division": "it",
+      "icon": "integration",
+      "shortDescription": "Connect your tools and systems so data flows where it needs to go, without manual work."
+    },
+    {
+      "id": "network-systems",
+      "title": "Network & Systems",
+      "slug": "it/network-systems.html",
+      "division": "it",
+      "icon": "network",
+      "shortDescription": "Reliable network infrastructure — from office WiFi to enterprise switching and VPN."
+    }
+  ],
+  "marketing": [
+    {
+      "id": "brand-strategy",
+      "title": "Brand Strategy",
+      "slug": "marketing/brand-strategy.html",
+      "division": "marketing",
+      "icon": "brand",
+      "shortDescription": "Define your positioning, visual identity, and messaging so your brand is consistent and clear."
+    },
+    {
+      "id": "digital-marketing",
+      "title": "Digital Marketing",
+      "slug": "marketing/digital-marketing.html",
+      "division": "marketing",
+      "icon": "digital",
+      "shortDescription": "Structured digital marketing programs that connect your channels and track what matters."
+    },
+    {
+      "id": "content-creation",
+      "title": "Content Creation",
+      "slug": "marketing/content-creation.html",
+      "division": "marketing",
+      "icon": "content",
+      "shortDescription": "Copy and content written for real people — specific, useful, and true to your brand voice."
+    },
+    {
+      "id": "social-media",
+      "title": "Social Media",
+      "slug": "marketing/social-media.html",
+      "division": "marketing",
+      "icon": "social",
+      "shortDescription": "Consistent, on-brand social presence managed end-to-end, from content to community."
+    },
+    {
+      "id": "seo-performance",
+      "title": "SEO Performance",
+      "slug": "marketing/seo-performance.html",
+      "division": "marketing",
+      "icon": "seo",
+      "shortDescription": "Organic search improvements built on solid technical foundations, not shortcuts."
+    },
+    {
+      "id": "paid-advertising",
+      "title": "Paid Advertising",
+      "slug": "marketing/paid-advertising.html",
+      "division": "marketing",
+      "icon": "ads",
+      "shortDescription": "Paid search and social campaigns focused on measurable results, not impressions."
+    },
+    {
+      "id": "campaign-management",
+      "title": "Campaign Management",
+      "slug": "marketing/campaign-management.html",
+      "division": "marketing",
+      "icon": "campaign",
+      "shortDescription": "Full campaign coordination from strategy through to delivery across every channel."
+    },
+    {
+      "id": "photography-video",
+      "title": "Photography & Video",
+      "slug": "marketing/photography-video.html",
+      "division": "marketing",
+      "icon": "photo",
+      "shortDescription": "Professional visual content — photography and video that gives your brand a look worth noticing."
+    }
+  ]
+}
