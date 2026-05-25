@@ -64,13 +64,32 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
-    padding: 1.5rem 5%;
+    padding: 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 90px;
+    transition: var(--transition);
+}
+
+nav.scrolled {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 24px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
@@ -95,20 +114,25 @@ nav {
 .menu-toggle {
     display: none;
     flex-direction: column;
-    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     cursor: pointer;
     background: none;
     border: none;
-    padding: 5px;
+    padding: 15px; /* Increased hit area */
     z-index: 1001;
+    width: 50px;
+    height: 50px;
 }
 
 .menu-toggle span {
     display: block;
-    width: 25px;
-    height: 2px;
+    width: 24px;
+    height: 2.5px; /* Thicker for better visibility */
     background: var(--text);
     transition: var(--transition);
+    border-radius: 2px;
 }
 
 /* Interactive Elements */

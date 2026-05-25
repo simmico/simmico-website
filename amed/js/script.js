@@ -2,7 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initStackGallery();
     initRevealAnimations();
     initMobileMenu();
+    initScrollHeader();
 });
+
+/**
+ * Scroll Header Effect
+ */
+function initScrollHeader() {
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+}
 
 /**
  * Mobile Navigation Toggle
