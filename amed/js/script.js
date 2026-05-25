@@ -1,7 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
     initStackGallery();
     initRevealAnimations();
+    initMobileMenu();
 });
+
+/**
+ * Mobile Navigation Toggle
+ */
+function initMobileMenu() {
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+
+    if (!toggle || !navLinks) return;
+
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            toggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
 
 /**
  * Robust Infinite Stack Gallery
