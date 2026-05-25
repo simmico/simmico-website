@@ -1,0 +1,18 @@
+I want to make a website to pitch to someone and convince them to buy it from me and to let me provide IT services to them.
+
+THey currently don't have a website and I would like to make one to give to them
+
+THey Are called Amed Couture and they sell and they specialise in creating custom-made outfits for any occasion that are both luxurious and affordable.
+Facebook: Amed Couture
+Northlands Deco Park, 3 Avant-Garde Ave, Northriding, Randburg, Johannesburg 2164.
+
+They have a logo but it looks shit, we can make a mock up in SVG for now for the website as a placeholder.
+
+I want a three page website. 3 HTML files. Actually make however many pages and files you think we need. CSS and JavaScript etc to be in separate files from the HTML itself. Their main colours in their logo seems to be a black background with gold and there is a gold crest with the letters AC on it and underneath it says AMED COUTURE and under that says "WHere we love style". I feel we can also give them a better tagline.
+
+Make the website optimised for mobile. I am thinking we have a feature with images where people can slide through like an album or gallery but the swiping is like tinder yes no where it send the image to the back of the carousel regardless of where they swipe till it cycles back.
+
+I also want SVG and scroll animations. I am thinking like this website:
+https://www.pinkponycreative.com/ Where on the landing page there is a pink horse that moves as the people scroll down and reverses when they scroll up. Lets include something like that in the site on a few of the pages.
+
+Also for language. English UK. No AI Slop like em dashes etc. Favicon in the top of the page for web browsers. And remember make it mobile friendly.
