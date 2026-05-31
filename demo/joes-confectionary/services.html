@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing | Joe's Confectionary Vanderbijlpark</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .services-hero {
+            padding: var(--space-xl) 0 var(--space-lg);
+            background-color: var(--color-bg);
+            text-align: center;
+        }
+
+        .category-section {
+            margin-bottom: var(--space-xl);
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .category-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-secondary);
+            margin: 1rem auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(146, 64, 14, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-secondary);
+            transform: translateY(-5px);
+        }
+
+        .pricing-card h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-tag {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .pricing-card p {
+            flex-grow: 1;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .faq-section {
+            background-color: var(--color-accent);
+            padding: var(--space-lg) 0;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background: var(--color-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .cta-footer {
+            text-align: center;
+            padding: var(--space-xl) 0;
+            background: linear-gradient(rgba(146, 64, 14, 0.05), rgba(146, 64, 14, 0.05)), var(--color-bg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        ⚡ Demo site by Simmico · <a href="https://simmico.co.za" target="_blank">simmico.co.za</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Joe's Confectionary</a>
+            <button class="mobile-menu-btn">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <header class="services-hero">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Services & Pricing</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Transparent pricing for artisanal quality. Choose your treat and let's start baking.</p>
+        </div>
+    </header>
+
+    <!-- Custom Cakes -->
+    <section class="container category-section reveal">
+        <div class="category-header">
+            <h2>Custom Cakes</h2>
+            <p>Bespoke creations for your most special occasions.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Birthday Cakes <span class="price-tag">from R450</span></h3>
+                <p>From character themes for the little ones to elegant designs for adults. Available in various sizes and flavors including Vanilla, Chocolate, and Red Velvet.</p>
+                <a href="https://wa.me/27646139941?text=Hi Joe's, I'd like to book a Birthday Cake." class="btn btn-outline" style="text-align: center;">Book Now</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Wedding Cakes <span class="price-tag">from R1,200</span></h3>
+                <p>Multi-tiered masterpieces tailored to your wedding theme. We offer tasting sessions and full delivery/setup across the Vaal region.</p>
+                <a href="https://wa.me/27646139941?text=Hi Joe's, I'd like to inquire about a Wedding Cake." class="btn btn-outline" style="text-align: center;">Inquire Now</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Cupcake Towers <span class="price-tag">from R18/ea</span></h3>
+                <p>A modern alternative to a traditional cake. Mix and match flavors with custom toppers to fit your party's color palette.</p>
+                <a href="https://wa.me/27646139941?text=Hi Joe's, I'd like to order some Cupcakes." class="btn btn-outline" style="text-align: center;">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artisanal Bakery -->
+    <section class="asymmetric-bg reveal" style="background-color: var(--color-accent); padding: var(--space-lg) 0;">
+        <div class="container category-section">
+            <div class="category-header">
+                <h2>Artisanal Bakery</h2>
+                <p>Freshly baked goods available for daily collection.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Gourmet Donuts <span class="price-tag">R120 (Box of 6)</span></h3>
+                    <p>Hand-dipped and decorated with premium glazes. Features seasonal flavors like Salted Caramel, Belgian Choc, and Pistachio.</p>
+                    <a href="https://wa.me/27646139941?text=Hi Joe's, I'd like to order a box of Donuts." class="btn btn-outline" style="text-align: center;">Order Box</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Artisan Breads <span class="price-tag">from R35</span></h3>
+                    <p>Sourdough, Ciabatta, and traditional White loaves baked fresh every morning. No preservatives, just pure flavor.</p>
+                    <a href="https://wa.me/27646139941?text=Hi Joe's, what fresh breads do you have today?" class="btn btn-outline" style="text-align: center;">Check Availability</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Sweet Confectionaries <span class="price-tag">from R15</span></h3>
+                    <p>Brownies, Éclairs, and Macarons. Perfect for a quick afternoon treat or a small gift for someone special.</p>
+                    <a href="https://wa.me/27646139941?text=Hi Joe's, I'd like to order some sweet treats." class="btn btn-outline" style="text-align: center;">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Platters -->
+    <section class="container category-section reveal">
+        <div class="category-header">
+            <h2>Catering Platters</h2>
+            <p>Stress-free catering for corporate and home events.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Sweet Platter <span class="price-tag">R450 (Serves 10)</span></h3>
+                <p>A selection of mini-brownies, lemon tarts, and cocktail donuts. Ideal for office tea times or birthday parties.</p>
+                <a href="https://wa.me/27646139941?text=Hi Joe's, I'd like to book a Sweet Platter." class="btn btn-outline" style="text-align: center;">Book Platter</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Savory Platter <span class="price-tag">R550 (Serves 10)</span></h3>
+                <p>Mini sausage rolls, quiches, and savory puffs. All made in-house using Joe's signature butter pastry.</p>
+                <a href="https://wa.me/27646139941?text=Hi Joe's, I'd like to book a Savory Platter." class="btn btn-outline" style="text-align: center;">Book Platter</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Mixed Combo <span class="price-tag">R900 (Serves 20)</span></h3>
+                <p>Our most popular option for larger gatherings. Includes a balanced mix of our best sweet and savory items.</p>
+                <a href="https://wa.me/27646139941?text=Hi Joe's, I'd like to book a Mixed Combo Platter." class="btn btn-outline" style="text-align: center;">Book Combo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section reveal">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2 style="font-size: 2.5rem;">Common Questions</h2>
+                <p>Everything you need to know before you order.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">How far in advance should I book a custom cake?<span>+</span></div>
+                    <div class="faq-answer">For standard birthday cakes, we require at least 3-5 days notice. For wedding cakes, we recommend booking 2-3 months in advance to secure your date.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you deliver in the Vaal area?<span>+</span></div>
+                    <div class="faq-answer">Yes! We deliver to Vanderbijlpark, Vereeniging, Sasolburg, and Meyerton. Delivery fees depend on the distance and the size of the order.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can you cater for specific dietary requirements?<span>+</span></div>
+                    <div class="faq-answer">We certainly do our best! We offer gluten-free and eggless options for most of our cakes. Please mention your requirements when booking.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer cake tasting sessions?<span>+</span></div>
+                    <div class="faq-answer">Yes, for wedding cake inquiries over R1,500, we offer a tasting box with our top 4 flavors for a small fee which is deducted from your final deposit.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Where are you located for collections?<span>+</span></div>
+                    <div class="faq-answer">Our bakery is located at 39 Col Gordon Street, Kollege Park, Vanderbijlpark. You'll see our sign right near the main road!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <div class="cta-footer reveal">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Ready for something sweet?</h2>
+            <p style="margin-bottom: 2rem;">Let's discuss your next celebration. Our team is ready to bake something unforgettable.</p>
+            <a href="https://wa.me/27646139941?text=Hi Joe's, I've seen your services and I'd like to place an order!" class="btn btn-primary">Start My Order</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">Joe's Confectionary</div>
+                    <p>Taste the sweetness of quality confectionary. Proudly serving the Vaal community with love and flour.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">IG</a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <h4>Contact Us</h4>
+                    <p>📍 39 Col Gordon Street, Kollege Park, Vanderbijlpark</p>
+                    <p>📞 064 613 9941</p>
+                    <p>✉️ massonglenn1978@gmail.com</p>
+                </div>
+
+                <div class="footer-info">
+                    <h4>Hours</h4>
+                    <p>Mon - Fri: 8am - 5pm</p>
+                    <p>Sat: 8am - 1pm</p>
+                    <p>Sun: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Joe's Confectionary. All rights reserved. | Demo site by <a href="https://simmico.co.za" style="color: var(--color-accent); text-decoration: underline;">Simmico</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/27646139941?text=Hi Joe's Confectionary, I have a question about your services!" class="whatsapp-float">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72 1.157 3.907 1.77 6.13 1.77h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const span = item.querySelector('span');
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    span.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    span.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

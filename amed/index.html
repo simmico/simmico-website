@@ -3,124 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMED | Precision Technical Atelier</title>
+    <title>AMED X | Future of Bespoke</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
         <div class="logo">
             <a href="index.html">
-                <img src="assets/logo.svg" alt="AMED Logo">
+                <img src="assets/logo.svg" alt="AMED X">
             </a>
         </div>
-        <button class="menu-toggle" aria-label="Toggle Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
         <div class="nav-links">
-            <a href="index.html" class="active">Atelier</a>
-            <a href="services.html">Services</a>
+            <a href="index.html" class="active">Systems</a>
+            <a href="services.html">Craft</a>
             <a href="gallery.html">Archive</a>
-            <a href="contact.html">Connect</a>
+            <a href="contact.html">Protocol</a>
         </div>
     </nav>
+
+    <div class="scroll-animation-container">
+        <svg class="scroll-svg" viewBox="0 0 200 200">
+            <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" fill="none" />
+            <text class="circle-text">
+                <textPath href="#circlePath">
+                    PRECISION CRAFTED — BESPOKE SYSTEMS — AMED X ATELIER —
+                </textPath>
+            </text>
+            <circle cx="100" cy="100" r="2" fill="var(--accent)" />
+            <rect x="99" y="40" width="2" height="60" rx="1" class="needle" />
+        </svg>
+    </div>
+
     <main>
-        <section class="hero" style="min-height: 70vh; padding-bottom: 40px;">
-            <span class="editorial-caps">Established 2026 / Northriding</span>
-            <h1>Precision<br><span style="color: var(--accent);">Atelier.</span></h1>
-            <p class="copy-large">Amed Couture merges computational precision with artisanal mastery to engineer garments that define the next era of personal style.</p>
-            <div style="display: flex; gap: 1.5rem;">
-                <a href="services.html" class="btn">Explore Services</a>
-                <a href="contact.html" class="btn" style="background: var(--surface); color: var(--text);">Private Fitting</a>
-            </div>
-        </section>
-        <section id="methodology" style="padding-top: 40px;">
-            <div class="grid-2">
-                <div>
-                    <span class="editorial-caps">Our Methodology</span>
-                    <h2 style="margin-bottom: 2rem;">Engineered for<br>Expression.</h2>
-                    <p class="copy-large">We believe that a garment is more than fabric. It is a technical extension of the self. Our studio in Northriding combines data-driven measurement with the intuitive eye of the master tailor.</p>
-                </div>
-                <div style="display: grid; gap: 2rem;">
-                    <div class="feature-item" style="padding: 2rem; background: var(--surface); border-radius: var(--radius);">
-                        <h4 style="color: var(--accent); margin-bottom: 1rem;">Dynamic Fitting</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Our fitting process considers motion, posture and ergonomics. We ensure comfort in every environment, from the boardroom to the gala.</p>
-                    </div>
-                    <div class="feature-item" style="padding: 2rem; background: var(--surface); border-radius: var(--radius);">
-                        <h4 style="color: var(--accent); margin-bottom: 1rem;">Fabric Engineering</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">We source textiles that respond to the South African climate. Every piece is breathable, durable and exceptionally textured.</p>
-                    </div>
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <span class="mono">Phase 01 / Technical Atelier</span>
+                <h1>Engineered<br>Style.</h1>
+                <p style="font-size: 1.5rem; color: var(--text-dim); max-width: 600px; margin: 2rem 0;">Amed X merges computational accuracy with high-fashion artisanal mastery. We don't just make clothes; we build systems for expression.</p>
+                <div style="margin-top: 4rem;">
+                    <a href="contact.html" class="btn-wow">
+                        Initiate Protocol
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </div>
             </div>
         </section>
-        <section id="metrics" style="background: var(--text); color: white;">
-            <div class="grid-2">
-                <div>
-                    <h2 style="color: white;">The Logic of<br>Luxury.</h2>
-                    <p style="margin-top: 2rem; color: rgba(255,255,255,0.6); max-width: 500px;">We have deconstructed the traditional tailoring workflow to eliminate irrational overheads. We deliver uncompromising bespoke quality at an accessible entry point.</p>
-                </div>
-                <div class="metrics-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-                    <div>
-                        <h4 style="font-size: 3rem; color: var(--accent);">50+</h4>
-                        <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.4);">DATA POINTS PER FIT</p>
+
+        <section id="innovation">
+            <div class="container">
+                <div class="bento-grid">
+                    <div class="bento-item large">
+                        <div>
+                            <span class="mono">Methodology</span>
+                            <h2 style="font-size: 4rem; margin-top: 1rem;">Data Driven<br>Fitting.</h2>
+                        </div>
+                        <p style="color: var(--text-dim);">Our proprietary measurement protocol captures 50+ unique data points to ensure an absolute fit that responds to your anatomy in motion.</p>
                     </div>
-                    <div>
-                        <h4 style="font-size: 3rem; color: var(--accent);">100%</h4>
-                        <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.4);">HAND-FINISHED SEAMS</p>
+                    
+                    <div class="bento-item tall" style="background: url('https://images.unsplash.com/photo-1594932224828-b4b059b6ffc0?q=80&w=400&h=800&auto=format&fit=crop'); background-size: cover; border: none;">
+                        <div class="glass" style="margin-top: auto; padding: 1.5rem; border-radius: var(--radius-sm);">
+                            <span class="mono">Textiles</span>
+                            <h4 style="margin-top: 0.5rem;">Fabric Engineering</h4>
+                        </div>
                     </div>
-                    <div>
-                        <h4 style="font-size: 3rem; color: var(--accent);">350+</h4>
-                        <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.4);">COMMISSIONS COMPLETED</p>
+
+                    <div class="bento-item">
+                        <span class="mono">01</span>
+                        <h3>Bespoke</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-dim);">One-of-one creations designed from the fiber up.</p>
                     </div>
-                    <div>
-                        <h4 style="font-size: 3rem; color: var(--accent);">15</h4>
-                        <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.4);">ARTISAN PARTNERS</p>
+
+                    <div class="bento-item">
+                        <span class="mono">02</span>
+                        <h3>Technical</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-dim);">Performance fabrics meeting architectural structure.</p>
+                    </div>
+
+                    <div class="bento-item wide glass">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h3 style="color: var(--accent);">350+</h3>
+                                <span class="mono">Commissions</span>
+                            </div>
+                            <div>
+                                <h3 style="color: var(--accent);">100%</h3>
+                                <span class="mono">Hand Finished</span>
+                            </div>
+                            <div>
+                                <h3 style="color: var(--accent);">15</h3>
+                                <span class="mono">Artisans</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="testimonials" style="text-align: center; background: var(--surface);">
-            <span class="editorial-caps">Client Voices</span>
-            <h2 style="font-size: 2.5rem; margin-bottom: 4rem;">The Amed Standard.</h2>
-            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; text-align: left;">
-                <div style="padding: 2rem; border-left: 1px solid var(--accent);">
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"A level of precision I have not found elsewhere in Johannesburg. The fit is absolute."</p>
-                    <p style="font-weight: 800; font-size: 0.8rem;">MARCUS D. / CORPORATE EXECUTIVE</p>
-                </div>
-                <div style="padding: 2rem; border-left: 1px solid var(--accent);">
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"They turned my vision into a masterpiece for my wedding. A truly bespoke experience."</p>
-                    <p style="font-weight: 800; font-size: 0.8rem;">SARAH L. / BRIDE</p>
-                </div>
-                <div style="padding: 2rem; border-left: 1px solid var(--accent);">
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Professional, technical and remarkably affordable for this level of craftsmanship."</p>
-                    <p style="font-weight: 800; font-size: 0.8rem;">THABO M. / ENTREPRENEUR</p>
+
+        <section id="vision" style="background: var(--surface-solid);">
+            <div class="container" style="text-align: center;">
+                <span class="mono">The Amed Ethos</span>
+                <h2 style="margin: 2rem 0;">Luxury Re-coded.</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; text-align: left; margin-top: 6rem;">
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 1.5rem;">Uncompromising Quality</h4>
+                        <p style="color: var(--text-dim);">We source only from Tier 1 mills in Italy and the UK. Every seam is a testament to precision.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 1.5rem;">Radical Accessibility</h4>
+                        <p style="color: var(--text-dim);">By streamlining the traditional atelier workflow, we provide bespoke luxury at an optimized price point.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 1.5rem;">Lifetime Support</h4>
+                        <p style="color: var(--text-dim);">Your garments grow with you. We offer lifetime adjustments for every commission we build.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="cta-strip" style="padding: 100px 10%; text-align: center; border-bottom: 1px solid var(--border);">
-            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Ready to define your silhouette?</h2>
-            <a href="contact.html" class="btn">Book Consultation</a>
+
+        <section id="cta" style="padding: 200px 0;">
+            <div class="container" style="text-align: center;">
+                <h1 style="font-size: 10vw; opacity: 0.1; position: absolute; left: 0; width: 100%; top: 50%; transform: translateY(-50%); pointer-events: none;">CONNECT</h1>
+                <h2 style="position: relative; z-index: 1;">Ready to upgrade your silhouette?</h2>
+                <div style="margin-top: 4rem;">
+                    <a href="contact.html" class="btn-wow">Book Consultation</a>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-            <img src="assets/logo.svg" alt="AMED" style="height: 20px; filter: invert(1);">
-            <div style="display: flex; gap: 1.5rem; align-items: center;">
-                <a href="https://facebook.com/AmedCouture" target="_blank" aria-label="Facebook">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-                <a href="#" aria-label="Instagram">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c.796 0 1.441.645 1.441 1.44s-.645 1.44-1.441 1.44-1.44-.645-1.44-1.44.645-1.44 1.441-1.44z"/></svg>
-                </a>
+
+    <footer style="padding: 100px 0; border-top: 1px solid var(--border);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <img src="assets/logo.svg" alt="AMED X" style="height: 20px;">
+            <p class="mono" style="color: var(--text-dim);">© 2026 AMED X ATELIER. ALL RIGHTS RESERVED.</p>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#" class="mono" style="text-decoration: none; color: var(--text-dim);">Instagram</a>
+                <a href="#" class="mono" style="text-decoration: none; color: var(--text-dim);">Facebook</a>
             </div>
-            <p style="font-size: 0.7rem; color: #666;">© 2026 AMED ATELIER. PRECISION CRAFTED.</p>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>

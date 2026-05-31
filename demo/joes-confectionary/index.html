@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Confectionary | Quality Bakery & Custom Cakes Vanderbijlpark</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #FDE68A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-mesh {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(at 10% 20%, rgba(146, 64, 14, 0.05) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, rgba(180, 83, 9, 0.05) 0px, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 5rem);
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text);
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+
+        .featured-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--color-white);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(146, 64, 14, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-secondary);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.5rem;
+            color: var(--color-secondary);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .trust-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .trust-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            color: var(--color-secondary);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .testimonial-stars {
+            color: #FBBF24;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-author {
+            margin-top: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .testimonial-location {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        ⚡ Demo site by Simmico · <a href="https://simmico.co.za" target="_blank">simmico.co.za</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Joe's Confectionary</a>
+            <button class="mobile-menu-btn">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-mesh"></div>
+        <div class="hero-content">
+            <h1>Sweet Moments, Baked with Love.</h1>
+            <p>Vanderbijlpark's favorite choice for custom cakes, artisanal bakery goods, and premium catering.</p>
+            <div class="hero-btns">
+                <a href="services.html" class="btn btn-primary">Our Services</a>
+                <a href="https://wa.me/27646139941?text=Hi Joe's Confectionary, I'd like to inquire about your cakes!" class="btn btn-outline">WhatsApp Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Preview -->
+    <section class="container reveal">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 3rem;">What We Bake</h2>
+            <p>From daily treats to your biggest celebrations.</p>
+        </div>
+        
+        <div class="featured-services">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18z"></path></svg>
+                </div>
+                <h3>Custom Cakes</h3>
+                <p>Bespoke designs for weddings, birthdays, and anniversaries. Built to your exact theme.</p>
+                <a href="services.html" style="margin-top: 1.5rem; display: inline-block; color: var(--color-secondary); font-weight: 700;">View Details &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
+                </div>
+                <h3>Artisanal Platters</h3>
+                <p>Perfect for corporate events or home functions. Sweet and savory options available.</p>
+                <a href="services.html" style="margin-top: 1.5rem; display: inline-block; color: var(--color-secondary); font-weight: 700;">View Details &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <h3>Fresh Bakery Goods</h3>
+                <p>Daily baked breads, pastries, and confectionaries using the finest local ingredients.</p>
+                <a href="services.html" style="margin-top: 1.5rem; display: inline-block; color: var(--color-secondary); font-weight: 700;">View Details &rarr;</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="services.html" class="btn btn-outline">View All Services</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="asymmetric-bg reveal" style="background-color: var(--color-accent);">
+        <div class="container">
+            <div style="max-width: 600px; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Why the Vaal Chooses Joe's</h2>
+                <p>We've spent years perfecting our recipes to bring a touch of sweetness to the Vanderbijlpark community.</p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                        <h4>Locally Sourced</h4>
+                        <p>We use premium ingredients from Vaal producers to ensure every bite is fresh and supports our community.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div>
+                        <h4>Freshly Baked Daily</h4>
+                        <p>We don't do "day-old". Our ovens start early every morning so you get that perfect crisp and soft texture.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.382-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                    </div>
+                    <div>
+                        <h4>Award-Winning Taste</h4>
+                        <p>Our custom cakes aren't just art—they taste even better than they look. Just ask our thousands of happy clients.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <div>
+                        <h4>Proudly Vaal</h4>
+                        <p>From Sasolburg to Vereeniging, we've been the centerpiece of the region's celebrations for over a decade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container reveal">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 2.5rem;">Vaal Stories</h2>
+            <p>Don't just take our word for it—here is what our local community says.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Joe's Confectionary is hands down the best bakery in Vanderbijlpark. I ordered a custom 3-tier cake for my daughter's wedding last month and it was absolutely stunning. Everyone was asking where we got it from! The sponge was so moist and the flavor was out of this world. Baie dankie to Joe and the team for making her day so special, we will definitely be back for every birthday."</p>
+                <div class="testimonial-author">Pieter van der Merwe</div>
+                <div class="testimonial-location">Vanderbijlpark</div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Lekker, lekker, lekker! I stop by Joe's every Saturday morning for their fresh pastries and it's the highlight of my week. Their platters are also a lifesaver for our office meetings in Sasolburg. The variety is great and you can tell everything is made with real care. If you haven't tried their chocolate éclairs yet, you are seriously missing out. Best service in the Vaal triangle!"</p>
+                <div class="testimonial-author">Thandiwe Mokwena</div>
+                <div class="testimonial-location">Sasolburg</div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"I was so stressed about finding a bakery that could do a specific theme for my son's first birthday, but Joe's Confectionary made it look easy. They listened to exactly what I wanted and the result was even better than the picture I showed them. It's so nice to have such high-quality service right here in Vereeniging. Baie dankie for the amazing work and the friendly smiles every time I walk in."</p>
+                <div class="testimonial-author">Lize-Mari Botha</div>
+                <div class="testimonial-location">Vereeniging</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">Joe's Confectionary</div>
+                    <p>Taste the sweetness of quality confectionary. Proudly serving the Vaal community with love and flour.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">IG</a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <h4>Contact Us</h4>
+                    <p>📍 39 Col Gordon Street, Kollege Park, Vanderbijlpark</p>
+                    <p>📞 064 613 9941</p>
+                    <p>✉️ massonglenn1978@gmail.com</p>
+                </div>
+
+                <div class="footer-info">
+                    <h4>Hours</h4>
+                    <p>Mon - Fri: 8am - 5pm</p>
+                    <p>Sat: 8am - 1pm</p>
+                    <p>Sun: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Joe's Confectionary. All rights reserved. | Demo site by <a href="https://simmico.co.za" style="color: var(--color-accent); text-decoration: underline;">Simmico</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/27646139941?text=Hi Joe's Confectionary, I'd like to know more about your custom cakes!" class="whatsapp-float">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72 1.157 3.907 1.77 6.13 1.77h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

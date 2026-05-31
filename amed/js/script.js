@@ -1,17 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    initStackGallery();
-    initRevealAnimations();
-    initMobileMenu();
-    initScrollHeader();
+    initBentoTilt();
+    initScrollDynamics();
+    initCinematicStack();
+    initGlobalReveal();
+    initFloatingNav();
 });
 
 /**
- * Scroll Header Effect
+ * Floating Nav Effect
  */
-function initScrollHeader() {
+function initFloatingNav() {
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
+        if (window.scrollY > 100) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
@@ -20,56 +21,76 @@ function initScrollHeader() {
 }
 
 /**
- * Mobile Navigation Toggle
+ * Technical Scroll Dynamics
+ * Rotates the needle and the circular text in opposite directions.
  */
-function initMobileMenu() {
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links a');
+function initScrollDynamics() {
+    const needle = document.querySelector('.needle');
+    const circleText = document.querySelector('.circle-text');
+    if (!needle || !circleText) return;
 
-    if (!toggle || !navLinks) return;
-
-    toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    window.addEventListener('scroll', () => {
+        const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        
+        // Needle rotates fast
+        const needleRotation = scrollPercent * 360 * 3;
+        needle.style.transform = `rotate(${needleRotation}deg)`;
+        
+        // Text rotates slowly in opposite direction
+        const textRotation = -scrollPercent * 360;
+        circleText.style.transformOrigin = 'center';
+        circleText.style.transform = `rotate(${textRotation}deg)`;
     });
+}
 
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            toggle.classList.remove('active');
-            navLinks.classList.remove('active');
-            document.body.style.overflow = '';
+/**
+ * Bento Grid Tilt Effect
+ */
+function initBentoTilt() {
+    const items = document.querySelectorAll('.bento-item');
+    
+    items.forEach(item => {
+        item.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = item.getBoundingClientRect();
+            const x = (e.clientX - left) / width - 0.5;
+            const y = (e.clientY - top) / height - 0.5;
+            
+            item.style.transform = `perspective(1000px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-5px)`;
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'perspective(1000px) rotateY(0) rotateX(0) translateY(0)';
         });
     });
 }
 
 /**
- * Robust Infinite Stack Gallery
- * Moves cards to the bottom of the DOM for a perfect loop.
+ * Cinematic Stack Gallery
  */
-function initStackGallery() {
+function initCinematicStack() {
     const viewport = document.querySelector('.stack-viewport');
     if (!viewport) return;
 
-    function arrangeStack() {
+    const arrange = () => {
         const cards = Array.from(viewport.querySelectorAll('.stack-card'));
         cards.forEach((card, i) => {
             const depth = cards.length - 1 - i;
             const isTop = i === cards.length - 1;
 
             card.style.zIndex = i;
-            card.style.opacity = depth > 3 ? "0" : "1";
-            card.style.transform = `scale(${1 - (depth * 0.05)}) translateY(${depth * -20}px)`;
-            card.style.pointerEvents = isTop ? "auto" : "none";
-            card.style.filter = isTop ? "none" : `blur(${depth * 2}px)`;
+            card.style.opacity = depth > 3 ? "0" : 1 - depth * 0.2;
+            card.style.transform = `
+                translateZ(${-depth * 100}px) 
+                translateY(${-depth * 40}px) 
+                scale(${1 - depth * 0.05})
+            `;
+            card.style.filter = isTop ? 'none' : `blur(${depth * 2}px) grayscale(${depth * 0.5})`;
+            card.style.pointerEvents = isTop ? 'auto' : 'none';
         });
-    }
+    };
 
-    // Initial setup
-    arrangeStack();
+    arrange();
 
-    // Event Delegation for dynamic looping
     let startX = 0;
     let currentX = 0;
     let isDragging = false;
@@ -78,16 +99,17 @@ function initStackGallery() {
     const onStart = (e) => {
         const cards = Array.from(viewport.querySelectorAll('.stack-card'));
         topCard = cards[cards.length - 1];
+        if (!topCard) return;
         
         isDragging = true;
-        startX = e.type.includes('touch') ? e.touches[0].pageX : e.pageX;
+        startX = (e.type.includes('touch') ? e.touches[0] : e).pageX;
         topCard.style.transition = 'none';
     };
 
     const onMove = (e) => {
         if (!isDragging || !topCard) return;
-        currentX = (e.type.includes('touch') ? e.touches[0].pageX : e.pageX) - startX;
-        const rotate = currentX / 20;
+        currentX = ((e.type.includes('touch') ? e.touches[0] : e).pageX) - startX;
+        const rotate = currentX / 15;
         topCard.style.transform = `translateX(${currentX}px) rotate(${rotate}deg) scale(1.05)`;
     };
 
@@ -96,34 +118,25 @@ function initStackGallery() {
         isDragging = false;
         
         const cardToMove = topCard;
-        cardToMove.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease';
+        cardToMove.style.transition = 'all 0.8s var(--ease)';
 
-        if (Math.abs(currentX) > 120) {
-            // Swipe Out
+        if (Math.abs(currentX) > 150) {
             const dir = currentX > 0 ? 1 : -1;
-            cardToMove.style.transform = `translateX(${dir * 1000}px) rotate(${dir * 45}deg)`;
+            cardToMove.style.transform = `translateX(${dir * 1500}px) rotate(${dir * 90}deg) scale(0.5)`;
             cardToMove.style.opacity = '0';
 
             setTimeout(() => {
-                // Move the swiped card to the very bottom of the DOM stack
                 viewport.prepend(cardToMove);
-                
-                // Reset card properties for its new life at the bottom
                 cardToMove.style.transition = 'none';
                 cardToMove.style.opacity = '1';
-                
-                arrangeStack();
-            }, 300);
+                arrange();
+            }, 400);
         } else {
-            // Snap back
-            arrangeStack();
+            arrange();
         }
-        
         currentX = 0;
-        topCard = null;
     };
 
-    // Global listeners for smoother interaction
     viewport.addEventListener('mousedown', onStart);
     viewport.addEventListener('touchstart', onStart);
     window.addEventListener('mousemove', onMove);
@@ -133,18 +146,19 @@ function initStackGallery() {
 }
 
 /**
- * Modern Scroll Reveal
+ * Staggered Global Reveal
  */
-function initRevealAnimations() {
+function initGlobalReveal() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('revealed');
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
 
-    document.querySelectorAll('section > *, .service-card, .feature').forEach(el => {
+    document.querySelectorAll('.bento-item, h1, h2, .btn-wow, .hero p').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 0.05}s`;
         el.classList.add('reveal-init');
         observer.observe(el);
     });
@@ -153,8 +167,8 @@ function initRevealAnimations() {
     style.textContent = `
         .reveal-init {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(60px);
+            transition: opacity 1.2s var(--ease-out), transform 1.2s var(--ease-out);
         }
         .revealed {
             opacity: 1;

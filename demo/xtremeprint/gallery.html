@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Xtreme Print By Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .filter-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            border: 1px solid var(--border);
+            background: white;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        ⚡ Demo site by Simmico · <a href="https://simmico.co.za">simmico.co.za</a>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">XTREME<span>PRINT</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero" style="background: var(--bg-dark); color: var(--text-light); text-align: center; padding: 10rem 1.5rem 6rem;">
+            <div class="container">
+                <h1 style="font-size: 4rem; margin-bottom: 1.5rem;">Our Work</h1>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.25rem; color: #94a3b8;">A showcase of our recent projects for clients in the Vaal.</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="filter-btns">
+                    <button class="filter-btn active" data-filter="all">All Work</button>
+                    <button class="filter-btn" data-filter="logo">Logo Design</button>
+                    <button class="filter-btn" data-filter="stationery">Stationery</button>
+                    <button class="filter-btn" data-filter="signage">Signage</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item large" data-category="signage">
+                        <img src="https://picsum.photos/id/1/800/800" alt="Large Signage" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white; font-size: 1.25rem;">Retail Signage</h4>
+                            <p style="color: #cbd5e1; font-size: 0.9rem;">Sasolburg Shopping Mall</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="logo">
+                        <img src="https://picsum.photos/id/2/400/400" alt="Logo Design" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Brand Identity</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Vaal Tech Startup</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="stationery">
+                        <img src="https://picsum.photos/id/3/400/400" alt="Business Cards" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Premium Cards</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Legal Firm Stationery</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item wide" data-category="signage">
+                        <img src="https://picsum.photos/id/4/800/400" alt="Vinyl Decals" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Vehicle Branding</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Fleet Graphics</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="logo">
+                        <img src="https://picsum.photos/id/5/400/400" alt="Logo" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Modern Logo</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Coffee Shop Branding</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="stationery">
+                        <img src="https://picsum.photos/id/6/400/400" alt="Flyers" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Promo Flyers</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Local Event Marketing</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item large" data-category="stationery">
+                        <img src="https://picsum.photos/id/7/800/800" alt="Corporate Kit" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white; font-size: 1.25rem;">Corporate Kit</h4>
+                            <p style="color: #cbd5e1; font-size: 0.9rem;">Full Branding Rollout</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="signage">
+                        <img src="https://picsum.photos/id/8/400/400" alt="Poster" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Event Posters</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Sasolburg Sports Day</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="logo">
+                        <img src="https://picsum.photos/id/9/400/400" alt="Minimal Logo" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Minimalist Icon</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Architect Studio</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item wide" data-category="signage">
+                        <img src="https://picsum.photos/id/10/800/400" alt="Banners" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Outdoor Banners</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Festival Signage</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="stationery">
+                        <img src="https://picsum.photos/id/11/400/400" alt="Letterhead" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Office Stationery</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Official Letterheads</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="signage">
+                        <img src="https://picsum.photos/id/12/400/400" alt="Window Graphics" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 style="color: white;">Storefront Decals</h4>
+                            <p style="color: #cbd5e1; font-size: 0.8rem;">Main Street Boutique</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">XTREME<span>PRINT</span></div>
+                    <p style="margin-bottom: 2rem; color: #94a3b8;">Bringing your brand to life with quality print. Your local partner for all things design and printing in Sasolburg.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">FB</a>
+                        <a href="#" class="social-link">IG</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Logo Design</a></li>
+                        <li><a href="services.html">Business Cards</a></li>
+                        <li><a href="services.html">Large Format</a></li>
+                        <li><a href="services.html">Vinyl Decals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Hours</h4>
+                    <p>Mon - Fri: 8am - 5pm</p>
+                    <p>Sat: 8am - 1pm</p>
+                    <p>Sun: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Xtreme Print By Design. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
