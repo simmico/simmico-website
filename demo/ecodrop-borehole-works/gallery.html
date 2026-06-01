@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Ecodrop Borehole Works</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-auto-rows: 280px;
+            gap: 20px;
+            grid-auto-flow: dense;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
+        .gallery-item.wide { grid-column: span 2; }
+        .gallery-item.tall { grid-row: span 2; }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 132, 199, 0.8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: var(--transition);
+            text-align: center;
+            padding: 20px;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-item.wide { grid-column: span 1; }
+            .gallery-item.tall { grid-row: span 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            ⚡ Demo site by Simmico · <a href="https://simmico.co.za" target="_blank">simmico.co.za</a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Ecodrop
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 400px; min-height: 400px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Work Gallery</h1>
+                <p>A showcase of our drilling projects and installations across the Vaal.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="drilling">Drilling</button>
+                <button class="filter-btn" data-filter="pumps">Pumps</button>
+                <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item wide" data-category="drilling">
+                    <img src="https://picsum.photos/id/101/800/600" alt="Borehole Drilling" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Deep Well Drilling</h3>
+                        <p>Residential project in Meyerton Central</p>
+                    </div>
+                </div>
+                <div class="gallery-item tall" data-category="pumps">
+                    <img src="https://picsum.photos/id/123/400/800" alt="Pump Installation" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Submersible Pump</h3>
+                        <p>High-yield installation for a local farm</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="maintenance">
+                    <img src="https://picsum.photos/id/134/400/400" alt="Maintenance" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>System Service</h3>
+                        <p>Annual check-up in Vanderbijlpark</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="drilling">
+                    <img src="https://picsum.photos/id/145/400/400" alt="Drilling" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Geology Testing</h3>
+                        <p>Soil analysis before drilling</p>
+                    </div>
+                </div>
+                <div class="gallery-item tall" data-category="pumps">
+                    <img src="https://picsum.photos/id/156/400/800" alt="Pumps" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Solar Pump Setup</h3>
+                        <p>Sustainable power solution</p>
+                    </div>
+                </div>
+                <div class="gallery-item wide" data-category="maintenance">
+                    <img src="https://picsum.photos/id/167/800/600" alt="Maintenance" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Pipe Replacement</h3>
+                        <p>Upgrading old infrastructure</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="drilling">
+                    <img src="https://picsum.photos/id/178/400/400" alt="Drilling" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Core Sampling</h3>
+                        <p>Technical drilling in Vereeniging</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="pumps">
+                    <img src="https://picsum.photos/id/189/400/400" alt="Pumps" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Pressure Tank</h3>
+                        <p>Stabilizing domestic water supply</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="maintenance">
+                    <img src="https://picsum.photos/id/190/400/400" alt="Maintenance" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Filter Cleaning</h3>
+                        <p>Ensuring water purity</p>
+                    </div>
+                </div>
+                <div class="gallery-item wide" data-category="drilling">
+                    <img src="https://picsum.photos/id/201/800/600" alt="Drilling" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Industrial Rig</h3>
+                        <p>Heavy-duty drilling for commercial use</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="pumps">
+                    <img src="https://picsum.photos/id/212/400/400" alt="Pumps" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Control Box</h3>
+                        <p>Advanced automation for water pumps</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="maintenance">
+                    <img src="https://picsum.photos/id/223/400/400" alt="Maintenance" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Yield Recovery</h3>
+                        <p>Revitalizing an old borehole</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Ecodrop Borehole Works</h4>
+                    <p>Sustainable water solutions for your home and farm. Serving Meyerton and the Vaal region with pride.</p>
+                    <div class="social-links">
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 65 Wattel Avenue, Meyerton, Gauteng 1961</li>
+                        <li>📞 066 430 4481</li>
+                        <li>💬 WhatsApp: 27664304481</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Mon-Fri: 8am - 5pm</li>
+                        <li>Sat: 8am - 1pm</li>
+                        <li>Sun: Closed</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ecodrop Borehole Works. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
