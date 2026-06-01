@@ -1,0 +1,208 @@
+The UI UX Pro Max skill is active. You have full access to all 
+67 styles, 161 reasoning rules, 57 font pairings, 161 color 
+palettes, and 99 UX guidelines from the skill. Use them.
+
+Make each files in its own folder in the simmico-website/demo/[businessname]
+
+Make the website responsive and mobile friendly so they should still be able to see the menu etc on mobile.
+
+═══════════════════════════════
+BEFORE YOU WRITE ANY CODE
+═══════════════════════════════
+
+Run your internal UI UX Pro Max reasoning engine on this 
+business type: [BUSINESS TYPE e.g. Hair Salon / Restaurant]
+
+Then state out loud:
+1. Which of your 161 industry rules you are applying
+2. The UI style you selected from your 67 styles and why
+3. Your font pairing from your 57 pairings (NO Inter, Roboto, 
+   Arial, system-ui, Space Grotesk — ever)
+4. Your color palette from your 161 palettes with hex values
+5. The ONE thing about this site that will be unforgettable
+6. Anti-patterns you are explicitly avoiding for this industry
+
+Do not skip this step. Do not proceed to code until done.
+
+run this
+/ui-ux-pro-max
+
+═══════════════════════════════
+BUSINESS DETAILS
+═══════════════════════════════
+
+Business Name:     Supertek Auto Works Alberton
+Type:              Automotive
+Tagline:           Precision engineering for your peace of mind.
+Location:          Alberton
+Full Address:      1 Voortrekker Road, Alberton, Gauteng 1449, South Africa
+Phone:             011 036 8967
+WhatsApp:          27110368967
+Email:             paulo@supertek.co.za
+Hours:             Mon-Fri 8am-5pm, Sat 8am-1pm
+Services:          Minor Service, Major Service, Brake Repairs, Engine Diagnostics
+Prices:            Minor Service from R850, Diagnostic from R450
+About:             Supertek Auto Works Alberton is a leading Automotive service provider in Alberton, committed to delivering high-quality solutions to our local community.
+
+═══════════════════════════════
+PAGES — BUILD ALL 5 SEPARATELY
+═══════════════════════════════
+
+index.html, about.html, services.html, gallery.html, contact.html
+One shared styles.css and one shared main.js
+
+Every page must include:
+- Navbar with links to all 5 pages + active state indicator
+  wa.me/27[NUMBER]?text=Hi, I'd like to know more about [NAME]
+- Footer: address, phone, hours, Facebook + Instagram placeholders
+- Top bar (slim, unobtrusive): 
+  "⚡ Demo site by Simmico · simmico.co.za"
+
+─────────────────────────────
+index.html — Home
+─────────────────────────────
+HERO:
+- Full viewport height
+- Business name + tagline + 2 CTAs: 
+  "Our Services" (→ services.html) + "WhatsApp Us" (→ wa.me)
+- Background: gradient mesh, layered shapes, or texture
+  NEVER a flat solid colour
+
+SERVICES PREVIEW:
+- 3 featured services with SVG icons (no emoji)
+- "View All Services" link to services.html
+
+WHY CHOOSE US:
+- 4 trust points written specifically for this business type
+  and location — not generic
+
+TESTIMONIALS — THIS IS MANDATORY AND NON-NEGOTIABLE:
+Write 3 complete, believable customer reviews.
+Each review MUST contain ALL of the following:
+  • Full South African name appropriate to the Vaal region
+  • Their suburb (Vereeniging / Vanderbijlpark / Meyerton / 
+    Sasolburg / Parys — rotate them)
+  • 5 gold stars ★★★★★
+  • 4–6 sentences of real review copy that:
+    - Mentions the business by name
+    - References a specific service they received
+    - Includes a personal detail (first time, came back, 
+      brought a friend, etc.)
+    - Sounds like a genuine local person wrote it
+    - May include light Afrikaans phrases naturally 
+      (e.g. "baie dankie", "lekker", "definitely")
+
+Example of the standard required:
+"★★★★★ I've been bringing my daughter to [Business] for her 
+braids for almost two years now and we won't go anywhere else 
+in the Vaal. The staff always make her feel comfortable and 
+the results are always perfect. Last month they did a full 
+colour treatment on me too — I was nervous but it came out 
+absolutely beautiful. Baie dankie to the whole team, you 
+guys are the best!"
+— Ntombi Shabalala, Vanderbijlpark
+
+CONTACT PREVIEW + MAP:
+- Google Maps embed for the address
+- Quick contact CTA
+
+─────────────────────────────
+about.html — About Us
+─────────────────────────────
+- Our Story: 3 paragraphs, first person, warm, 
+  mentions the Vaal community by name
+- Team section: 3 members, names + roles + 2 sentence bios,
+  picsum.photos placeholder images
+- Mission/values section: 3 values with icons
+- Stats bar: "X Years Experience · X+ Happy Clients · 
+  Proudly Serving the Vaal"
+
+─────────────────────────────
+services.html — Services & Pricing
+─────────────────────────────
+- Full services list grouped into categories
+- Each service: name, 2-sentence description, price, 
+  individual WhatsApp booking CTA
+- Pricing displayed clearly (not hidden)
+- FAQ: 5 questions with genuine, helpful answers
+- Bottom CTA section
+
+─────────────────────────────
+gallery.html — Gallery
+─────────────────────────────
+- Masonry or asymmetric grid layout
+- 12 images from picsum.photos (varied sizes for visual interest)
+- Category filter buttons using vanilla JS
+- Hover overlay on each image with a caption
+- Lightbox effect on click (vanilla JS, no libraries)
+
+─────────────────────────────
+contact.html — Contact
+─────────────────────────────
+- NO Contact form: Only 3 buttons and a copy. Buttons must link to WhatsApp, phone call and email.
+- Large click-to-call button
+- Large WhatsApp button
+- Google Maps embed
+- Business hours in a clear visual layout
+- Social media links
+
+═══════════════════════════════
+DESIGN — NON-NEGOTIABLE RULES
+═══════════════════════════════
+
+TYPOGRAPHY:
+- Use your UI UX Pro Max font pairing
+- Display font for all headings
+- Body font for paragraphs and UI text
+- Google Fonts import only
+- BANNED: Inter, Roboto, Arial, system-ui, Space Grotesk
+
+COLOUR:
+- Full CSS custom properties colour system
+- Dominant colour + secondary + accent + background + text
+- Contrast minimum 4.5:1 on all text
+- No purple gradients on white — ever
+
+DEPTH & ATMOSPHERE:
+- Every section has visual atmosphere — 
+  gradients, textures, layering, shadows
+- Cards: box-shadow + hover lift transform
+- Sections must feel distinct from each other
+- At least one asymmetric or grid-breaking layout per page
+
+MOTION:
+- Hero: staggered CSS animation on load 
+  (animation-delay per element)
+- Scroll: IntersectionObserver fade/slide in main.js
+- Hover: 150–300ms smooth transitions on all interactive elements
+- prefers-reduced-motion respected in CSS
+
+ICONS:
+- SVG icons only — inline or from unpkg.com/heroicons
+- ZERO emoji used as design elements
+
+ANTI-PATTERNS — NEVER DO ANY OF THESE:
+- Flat white cards on white backgrounds
+- Generic hero with stock photo + white text overlay + nothing else
+- WordPress-looking section layouts
+- Lorem ipsum anywhere
+- Review names with no review text
+- Purple/pink AI gradient aesthetic
+- Sections that look the same as each other
+- Inter or Space Grotesk font
+- Solid colour hero backgrounds
+
+═══════════════════════════════
+CODE STANDARDS
+═══════════════════════════════
+
+- HTML5 semantic elements throughout
+- One styles.css, one main.js, shared across all pages
+- CSS custom properties for colours, spacing, typography
+- Mobile-first: breakpoints at 375px, 768px, 1024px, 1440px
+- cursor: pointer on everything clickable
+- Visible focus states for keyboard navigation
+- All images: loading="lazy" + descriptive alt text
+- NO frameworks, NO CSS libraries, NO JS libraries
+- Only external dependency allowed: Google Fonts
+- Clean, commented code
