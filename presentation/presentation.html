@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8" />
-<title>Neuro Self-Mastery — Cinematic Proposal</title>
+<title>Neuro Self-Mastery : Educational Proposal</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <template id="__bundler_thumbnail" data-bg-color="#06041a">
@@ -39,7 +39,7 @@
     </text>
     <text x="600" y="750" font-family="ui-monospace, monospace" font-size="22"
           fill="#38bdf8" text-anchor="middle" letter-spacing="6">
-      LOADING · CINEMATIC PROPOSAL
+      EDUCATIONAL PROPOSAL · SCHOOLS EDITION
     </text>
   </svg>
 </template>
@@ -50,18 +50,18 @@
 
 <script type="application/json" id="speaker-notes">
 [
-  "Open with stillness. This proposal is about rewiring the way a security operative's brain performs under pressure. Take a breath before the next slide.",
-  "Before anything else: this team is not broken. They are fully trained firearm carriers, combat-trained, and skilled in personal-security service. This proposal does not assume gaps. It assumes the opposite — and offers the layer that sits above tactical competence.",
-  "Tactical training is the floor. The brain under fire is the ceiling. Four challenges sit between training and outcome — not as failures of your operatives, but as universal features of how the human brain handles threat.",
-  "These three figures are why behavioural performance has become a board-level concern. Behind every escalation is a nervous system that lost control of itself in roughly one second.",
-  "Neuro Self-Mastery is the answer. Not a wellness programme. A neuroscience-informed performance system, built for people who carry firearms and operate at extreme stress thresholds.",
+  "Open with stillness. This proposal is about rewiring the way an educator's and learner's brain performs under pressure. Take a breath before the next slide.",
+  "Before anything else: your teaching staff and leadership are not broken. They are dedicated, skilled, and passionate educational professionals. This proposal does not assume gaps. It assumes the opposite, and offers the neurological layer that sits above pedagogical training.",
+  "Pedagogical training is the floor. The brain under pressure is the ceiling. Four challenges sit between teaching and outcome, not as failures of your educators, but as universal features of how the human brain handles chronic stress and cognitive overload.",
+  "These three figures are why behavioural regulation and teacher wellbeing have become board and leadership priorities. Behind every classroom conflict or teacher burnout is a nervous system under severe strain.",
+  "Neuro Self-Mastery is the answer. Not a generic wellness seminar. A neuroscience-informed performance system, built specifically for the cognitive and emotional demands of educators, school leaders, and learners.",
   "A short introduction to the practitioner. The credibility of this work rests on a decade of translating brain science into practical tools for high-pressure environments.",
-  "Every module of this programme has been contextualised for the realities of armed close-protection work. Nothing generic.",
-  "Four delivery formats, scaled to your organisation. We recommend most clients begin with the introductory session and grow from there.",
-  "The curriculum itself. Six focus areas that together rewire how the brain responds to threat. Spend the most time on EQ in the Field — this is the primary upgrade for an already high-performing team: less combative, more composed, with the discipline to defuse situations that can be defused without losing tactical readiness.",
-  "The transformation in plain terms. Reactive becomes responsive. Your team is already efficient — what changes is the default posture: less combative, more composed, defusing what can be defused. Liability becomes leadership.",
-  "Why this is a strategic investment, not a training spend. Six business outcomes, each one with a measurable line in your operations.",
-  "A reminder of what makes this different from generic EQ or wellness. Evidence, context, durability.",
+  "Every module of this programme has been contextualised for the realities of modern education, classroom dynamics, and school leadership. Nothing generic.",
+  "Flexible delivery formats and investment options, scaled to your school. Including our dedicated Neuro Self-Mastery game facilitation. We recommend most schools begin with the introductory session and grow from there.",
+  "The curriculum itself. Six focus areas that together rewire how the brain responds to stress. Spend the most time on Co-Regulation and Classroom EQ, this is the primary upgrade: calm authority, emotional composure, and the discipline to defuse tension proactively.",
+  "The transformation in plain terms. Reactive becomes responsive. Your staff is already dedicated, what changes is the default posture: less reactive, more composed, defusing friction before it escalates. Fatigue becomes inspired leadership.",
+  "Why this is a strategic investment for your school, not just a training spend. Six educational outcomes, each with a measurable impact on academic performance and staff retention.",
+  "A reminder of what makes this different from generic EQ or wellness seminars. Evidence, educational context, and durability.",
   "A moment to land the philosophy before we move to next steps.",
   "How we begin. Low-risk on-ramp, then customised rollout.",
   "Closing. The invitation, the contact details, and an offer to begin the conversation this week."
@@ -84,7 +84,7 @@
     --card-bg:        rgba(124,58,237,0.07);
     --card-border:    rgba(124,58,237,0.25);
 
-    /* ---- semantic mapping (kept for layout compat) ---- */
+    /* ---- semantic mapping ---- */
     --bg:           var(--deep);
     --bg-deep:      #03021a;
     --bg-soft:      var(--navy);
@@ -95,7 +95,7 @@
     --fg-mid:       rgba(196,181,253,0.78);
     --fg-dim:       rgba(196,181,253,0.55);
     --fg-faint:     rgba(196,181,253,0.42);
-    --ember:        var(--electric);          /* old ember refs now read as electric blue */
+    --ember:        var(--electric);
     --ember-deep:   var(--violet);
     --ember-soft:   rgba(56,189,248,0.18);
 
@@ -152,7 +152,7 @@
     mask-image: radial-gradient(ellipse at center, #000 30%, transparent 90%);
   }
 
-  /* Continuous "neural orb" — violet → pink gradient glow that re-anchors per slide */
+  /* Continuous "neural orb" : violet to pink gradient glow that re-anchors per slide */
   deck-stage section::after {
     content: "";
     position: absolute;
@@ -184,7 +184,7 @@
     100% { opacity: 1; transform: translate(-50%,-50%) scale(calc(var(--orb-scale) * 1.08)); }
   }
 
-  /* Neural-net layer — fine lines, nodes, signal pulses */
+  /* Neural-net layer : fine lines, nodes, signal pulses */
   .neural-net {
     position: absolute;
     inset: 0;
@@ -335,7 +335,6 @@
   }
 
   /* ---------------- cinematic entry animations ---------------- */
-  /* Each element with data-anim is hidden until the slide is active. */
   [data-anim] { opacity: 0; }
   deck-stage section[data-deck-active] [data-anim="up"] {
     animation: anim-up 900ms cubic-bezier(0.16,0.84,0.30,1) backwards;
@@ -448,104 +447,105 @@
     width: 18px;
     height: 18px;
     z-index: 4;
-    pointer-events: none;
   }
   .crosshair::before, .crosshair::after {
     content: "";
     position: absolute;
-    background: var(--fg-faint);
+    background: var(--ember);
+    opacity: 0.7;
   }
-  .crosshair::before { left: 50%; top: 0; bottom: 0; width: 1px; transform: translateX(-50%); }
-  .crosshair::after  { top: 50%; left: 0; right: 0; height: 1px; transform: translateY(-50%); }
-  .crosshair.tl { top: 32px;  left: 32px; }
-  .crosshair.tr { top: 32px;  right: 32px; }
-  .crosshair.bl { bottom: 32px; left: 32px; }
-  .crosshair.br { bottom: 32px; right: 32px; }
+  .crosshair::before { width: 100%; height: 1px; top: 50%; left: 0; }
+  .crosshair::after  { height: 100%; width: 1px; left: 50%; top: 0; }
+  .crosshair.tl { top: 56px; left: 56px; }
+  .crosshair.tr { top: 56px; right: 56px; }
+  .crosshair.bl { bottom: 56px; left: 56px; }
+  .crosshair.br { bottom: 56px; right: 56px; }
 
   /* ===================================================
-     SLIDE 1 — title
+     SLIDE 1 : title
      =================================================== */
+  .slide-01 { justify-content: space-between; }
   .s1-wrap {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    height: 100%;
-  }
-  .s1-top {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 38px;
+    justify-content: space-between;
+    height: 100%;
   }
   .s1-eyebrow {
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.42em;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--ember);
+    margin-bottom: 24px;
   }
   .s1-title {
     font-family: var(--f-display);
-    font-size: 192px;
-    line-height: 0.92;
+    font-size: 156px;
+    line-height: 0.88;
     font-weight: 300;
-    letter-spacing: -0.035em;
     color: var(--fg);
-    margin: 0;
+    letter-spacing: -0.035em;
+    margin: 0 0 36px 0;
+    text-wrap: balance;
     font-variation-settings: "opsz" 72;
   }
   .s1-title .acc {
     font-style: italic;
-    font-weight: 400;
-    background: linear-gradient(95deg, var(--violet-light) 0%, var(--pink) 60%, var(--violet-glow) 100%);
+    background: linear-gradient(135deg, var(--white) 0%, var(--violet-light) 60%, var(--pink) 100%);
     -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
   }
   .s1-sub {
     font-family: var(--f-sans);
-    font-size: 30px;
+    font-size: 32px;
+    line-height: 1.35;
     color: var(--fg-mid);
-    max-width: 980px;
-    line-height: 1.4;
+    max-width: 900px;
     font-weight: 300;
   }
   .s1-bottom {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
+    padding-top: 36px;
     border-top: 1px solid var(--line);
-    padding-top: 28px;
-  }
-  .s1-bottom .left, .s1-bottom .right {
-    display: flex;
-    gap: 36px;
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.20em;
     text-transform: uppercase;
     color: var(--fg-faint);
   }
-  .s1-bottom .right { color: var(--fg-mid); }
+  .s1-bottom .left { display: flex; gap: 28px; }
+  .s1-bottom .right { display: flex; gap: 28px; }
 
   /* ===================================================
-     SLIDE 2 — challenge / 4 quadrants
+     SLIDE 2 : challenge / 4 quadrants
      =================================================== */
   .s2-wrap {
     display: grid;
     grid-template-rows: auto auto 1fr;
-    gap: 56px;
+    gap: 40px;
     height: 100%;
   }
-  .s2-head { display: flex; flex-direction: column; gap: 32px; }
+  .s2-head {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1500px;
+  }
   .s2-quads {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-    align-self: end;
+    gap: 1px;
+    background: var(--line);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }
   .quad {
-    border-top: 1px solid var(--line);
-    padding-top: 28px;
+    background: var(--bg);
+    padding: 38px 30px;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -558,11 +558,11 @@
   }
   .quad .ttl {
     font-family: var(--f-display);
-    font-size: 38px;
-    font-weight: 400;
+    font-size: 40px;
     line-height: 1.05;
     color: var(--fg);
-    font-variation-settings: "opsz" 32;
+    font-weight: 400;
+    font-variation-settings: "opsz" 36;
   }
   .quad .desc {
     font-family: var(--f-sans);
@@ -573,254 +573,238 @@
   }
 
   /* ===================================================
-     SLIDE 3 — stakes / 3 stats
+     SLIDE 3 : stakes / 3 stats
      =================================================== */
   .s3-wrap {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    gap: 40px;
+    gap: 48px;
     height: 100%;
   }
   .s3-stats {
     display: grid;
-    grid-template-columns: 1.1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 60px;
     align-items: center;
   }
   .stat {
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    padding-right: 40px;
-    position: relative;
-  }
-  .stat + .stat::before {
-    content: "";
-    position: absolute;
-    left: -30px; top: 8%; bottom: 8%;
-    width: 1px;
-    background: var(--line);
+    gap: 14px;
+    border-left: 1px solid var(--line);
+    padding-left: 36px;
   }
   .stat .figure {
     font-family: var(--f-display);
-    font-size: 220px;
-    line-height: 0.86;
+    font-size: 160px;
+    line-height: 0.85;
     font-weight: 300;
-    letter-spacing: -0.04em;
     color: var(--fg);
+    letter-spacing: -0.04em;
     font-variation-settings: "opsz" 72;
   }
   .stat .figure .unit {
-    font-size: 0.40em;
     color: var(--ember);
-    font-style: italic;
-    margin-left: 6px;
-    vertical-align: 0.18em;
+    font-size: 80px;
+    margin-left: 4px;
   }
   .stat .label {
     font-family: var(--f-sans);
-    font-size: 26px;
-    line-height: 1.45;
+    font-size: 24px;
+    line-height: 1.4;
     color: var(--fg-mid);
+    max-width: 440px;
     font-weight: 300;
-    max-width: 420px;
   }
   .s3-foot {
-    border-top: 1px solid var(--line);
-    padding-top: 28px;
-    max-width: 1480px;
     font-family: var(--f-sans);
-    font-size: 26px;
-    line-height: 1.45;
+    font-size: 28px;
     color: var(--fg-mid);
+    line-height: 1.4;
+    max-width: 1400px;
     font-weight: 300;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
   }
-  .s3-foot strong { color: var(--fg); font-weight: 500; }
 
   /* ===================================================
-     SLIDE 4 — solution
+     SLIDE 4 : solution
      =================================================== */
   .s4-wrap {
     display: grid;
-    grid-template-columns: 1.05fr 1fr;
-    gap: 96px;
-    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
     align-items: center;
+    height: 100%;
   }
-  .s4-left { display: flex; flex-direction: column; gap: 36px; }
+  .s4-left { display: flex; flex-direction: column; gap: 28px; }
   .s4-title {
     font-family: var(--f-display);
-    font-size: 132px;
-    line-height: 1.02;
-    font-weight: 300;
+    font-size: 96px;
+    line-height: 0.95;
     color: var(--fg);
-    letter-spacing: -0.03em;
-    margin: 0;
+    font-weight: 300;
     font-variation-settings: "opsz" 72;
   }
-  .s4-title em { font-style: italic; color: var(--violet-light); font-weight: 400; }
-  .s4-body { font-size: 26px; line-height: 1.5; color: var(--fg-mid); max-width: 720px; font-weight: 300; }
+  .s4-title em { font-style: italic; color: var(--violet-light); }
+  .s4-body {
+    font-family: var(--f-sans);
+    font-size: 32px;
+    line-height: 1.4;
+    color: var(--fg-mid);
+    font-weight: 300;
+  }
   .s4-list {
     list-style: none;
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
+    gap: 22px;
   }
   .s4-list li {
-    display: grid;
-    grid-template-columns: 64px 1fr;
+    display: flex;
     gap: 24px;
-    padding: 22px 0;
-    border-top: 1px solid var(--line-soft);
     align-items: baseline;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line-soft);
   }
-  .s4-list li:last-child { border-bottom: 1px solid var(--line-soft); }
   .s4-list .idx {
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.24em;
+    letter-spacing: 0.20em;
     color: var(--ember);
-    padding-top: 4px;
+    flex-shrink: 0;
   }
   .s4-list .txt {
     font-family: var(--f-display);
-    font-size: 28px;
-    line-height: 1.25;
+    font-size: 32px;
     color: var(--fg);
+    line-height: 1.2;
     font-weight: 400;
     font-variation-settings: "opsz" 32;
   }
 
   /* ===================================================
-     SLIDE 5 — about
+     SLIDE 5 : about
      =================================================== */
   .s5-wrap {
     display: grid;
-    grid-template-columns: 480px 1fr;
-    gap: 96px;
-    height: 100%;
+    grid-template-columns: 460px 1fr;
+    gap: 80px;
     align-items: center;
+    height: 100%;
   }
   .s5-portrait {
-    aspect-ratio: 4 / 5;
-    background-color: var(--bg-soft);
-    background-image: url('assets/terry-leigh-portrait.jpeg');
-    background-size: cover;
-    background-position: center 20%;
-    border: 1px solid var(--card-border);
     position: relative;
-    overflow: hidden;
-    box-shadow:
-      inset 0 -120px 160px -40px rgba(6,4,26,0.55),
-      0 30px 80px -30px rgba(124,58,237,0.45);
-  }
-  .s5-portrait::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+    width: 440px;
+    height: 580px;
+    border: 1px solid var(--line);
     background:
-      linear-gradient(180deg, rgba(6,4,26,0) 55%, rgba(6,4,26,0.55) 100%),
-      radial-gradient(circle at 70% 18%, rgba(124,58,237,0.18) 0%, transparent 55%);
-    pointer-events: none;
-    z-index: 1;
-  }
-  .s5-portrait .crosshair-frame {
-    position: absolute; inset: 12px;
-    border: 1px solid rgba(196,181,253,0.20);
-    z-index: 2;
-    pointer-events: none;
+      linear-gradient(180deg, rgba(124,58,237,0.18) 0%, rgba(6,4,26,0.85) 100%),
+      url("terry-leigh-portrait.jpeg") center top / cover no-repeat,
+      url("../terry-leigh-portrait.jpeg") center top / cover no-repeat;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.55);
   }
   .s5-portrait .portrait-tag {
     position: absolute;
-    left: 24px; bottom: 22px;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background: rgba(6,4,26,0.92);
+    border: 1px solid var(--line);
+    padding: 12px 18px;
     font-family: var(--f-mono);
     font-size: 14px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--violet-light);
-    z-index: 3;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    color: var(--ember);
+    backdrop-filter: blur(8px);
   }
-  .s5-portrait .portrait-tag::before {
-    content: "";
-    width: 22px; height: 1px;
-    background: var(--violet-light);
-    display: inline-block;
-  }
-  .s5-right { display: flex; flex-direction: column; gap: 30px; }
+  .s5-right { display: flex; flex-direction: column; gap: 20px; }
   .s5-name {
     font-family: var(--f-display);
-    font-size: 96px;
-    line-height: 0.96;
+    font-size: 88px;
+    line-height: 0.95;
     font-weight: 300;
     color: var(--fg);
-    letter-spacing: -0.025em;
-    margin: 0;
     font-variation-settings: "opsz" 72;
   }
-  .s5-name em { font-style: italic; color: var(--violet-light); font-weight: 400; }
+  .s5-name em {
+    font-style: italic;
+    color: var(--violet-light);
+  }
   .s5-role {
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.24em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--fg-faint);
+    color: var(--ember);
   }
-  .s5-bio { font-size: 24px; line-height: 1.5; color: var(--fg-mid); font-weight: 300; max-width: 820px; }
+  .s5-bio {
+    font-family: var(--f-sans);
+    font-size: 28px;
+    line-height: 1.45;
+    color: var(--fg-mid);
+    font-weight: 300;
+    max-width: 1000px;
+  }
   .s5-areas {
     display: flex;
+    gap: 12px;
     flex-wrap: wrap;
-    gap: 12px 14px;
-    margin-top: 10px;
+    padding-top: 14px;
   }
-  .chip {
+  .s5-areas .chip {
     font-family: var(--f-mono);
     font-size: 24px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--fg-mid);
+    color: var(--fg);
+    padding: 8px 18px;
     border: 1px solid var(--line);
-    padding: 12px 20px;
-    border-radius: 999px;
+    background: var(--surface);
   }
 
   /* ===================================================
-     SLIDE 6 — built for sector / 6 modules grid
+     SLIDE 6 : built for sector / 6 modules grid
      =================================================== */
   .s6-wrap {
     display: grid;
     grid-template-rows: auto 1fr;
-    gap: 56px;
+    gap: 48px;
     height: 100%;
   }
-  .s6-head { display: flex; flex-direction: column; gap: 26px; }
+  .s6-head {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
   .s6-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 1px;
-    background: var(--line-soft);
+    background: var(--line);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
   .mod {
     background: var(--bg);
-    padding: 30px 32px;
+    padding: 32px 30px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
   }
   .mod .num {
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.24em;
     color: var(--ember);
   }
   .mod .ttl {
     font-family: var(--f-display);
-    font-size: 32px;
+    font-size: 34px;
     line-height: 1.1;
     color: var(--fg);
     font-weight: 400;
@@ -835,17 +819,17 @@
   }
 
   /* ===================================================
-     SLIDE 7 — programme delivery
+     SLIDE 7 : programme delivery & pricing
      =================================================== */
   .s7-wrap {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr;
     gap: 40px;
     height: 100%;
   }
   .s7-tiers {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1px;
     background: var(--line-soft);
     border-top: 1px solid var(--line);
@@ -854,74 +838,75 @@
   }
   .tier {
     background: var(--bg);
-    padding: 36px 30px 30px;
+    padding: 32px 22px 26px;
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    min-height: 460px;
+    gap: 16px;
+    min-height: 440px;
     position: relative;
   }
   .tier.featured { background: rgba(124,58,237,0.10); }
   .tier.featured::after {
     content: "MOST POPULAR";
     position: absolute;
-    top: -1px; right: 22px;
+    top: -1px; right: 14px;
     background: var(--violet);
     color: var(--white);
     font-family: var(--f-mono);
-    font-size: 14px;
-    letter-spacing: 0.20em;
-    padding: 7px 12px 6px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    padding: 6px 10px 5px;
     font-weight: 600;
   }
   .tier .num {
     font-family: var(--f-mono);
-    font-size: 24px;
-    letter-spacing: 0.24em;
+    font-size: 22px;
+    letter-spacing: 0.22em;
     color: var(--ember);
   }
   .tier .name {
     font-family: var(--f-display);
-    font-size: 38px;
-    line-height: 1.0;
+    font-size: 34px;
+    line-height: 1.05;
     color: var(--fg);
     font-weight: 400;
     font-variation-settings: "opsz" 32;
   }
   .tier .meta {
     font-family: var(--f-mono);
-    font-size: 24px;
-    letter-spacing: 0.18em;
+    font-size: 20px;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--fg-faint);
   }
   .tier .desc {
     font-family: var(--f-sans);
-    font-size: 24px;
-    line-height: 1.5;
+    font-size: 22px;
+    line-height: 1.45;
     color: var(--fg-mid);
     font-weight: 300;
     flex: 1;
   }
   .tier .price {
     font-family: var(--f-display);
-    font-size: 28px;
+    font-size: 26px;
     color: var(--fg);
     font-weight: 400;
     margin-top: auto;
-    padding-top: 18px;
+    padding-top: 16px;
     border-top: 1px solid var(--line);
     font-variation-settings: "opsz" 32;
   }
   .tier .price small {
     font-family: var(--f-mono);
-    font-size: 24px;
-    letter-spacing: 0.2em;
+    font-size: 20px;
+    letter-spacing: 0.18em;
     color: var(--fg-faint);
     display: block;
     margin-bottom: 6px;
     text-transform: uppercase;
   }
+
   .s7-foot {
     font-family: var(--f-mono);
     font-size: 14px;
@@ -932,7 +917,7 @@
   }
 
   /* ===================================================
-     SLIDE 8 — curriculum
+     SLIDE 8 : curriculum
      =================================================== */
   .s8-wrap {
     display: grid;
@@ -1007,7 +992,7 @@
   }
 
   /* ===================================================
-     SLIDE 9 — before / after
+     SLIDE 9 : before / after
      =================================================== */
   .s9-wrap {
     display: grid;
@@ -1044,54 +1029,32 @@
   }
   .ba-list.before li { color: var(--fg-dim); }
   .ba-list.before li::before {
-    content: "—";
+    content: "-";
     position: absolute; left: 0;
     color: var(--fg-faint);
     font-family: var(--f-sans);
   }
   .ba-list.after li::before {
-    content: "+";
+    content: "→";
     position: absolute; left: 0;
     color: var(--ember);
     font-family: var(--f-sans);
   }
   .ba-list li.key {
-    color: var(--fg);
-    font-size: 26px;
-    line-height: 1.32;
-    padding: 14px 18px 14px 28px;
-    background:
-      linear-gradient(90deg, rgba(232,121,249,0.10) 0%, rgba(124,58,237,0.04) 60%, transparent 100%);
-    border-left: 2px solid var(--pink);
-    margin-left: -28px;
-    padding-left: 40px;
+    background: rgba(124,58,237,0.08);
+    border-left: 2px solid var(--ember);
+    padding: 10px 14px 10px 20px;
+    margin-left: -22px;
   }
-  .ba-list.before li.key {
-    color: var(--fg-mid);
-    background:
-      linear-gradient(90deg, rgba(196,181,253,0.06) 0%, transparent 100%);
-    border-left: 2px solid var(--fg-faint);
-  }
-  .ba-list li.key::before { left: 12px; }
-  .ba-list.before li.key::before { left: 12px; }
-  .s9-lead {
-    font-family: var(--f-sans);
-    font-size: 26px;
-    line-height: 1.5;
-    color: var(--fg-mid);
-    font-weight: 300;
-    max-width: 1500px;
-    margin-top: 4px;
-  }
-  .s9-lead strong { color: var(--violet-light); font-weight: 500; }
+  .ba-list.before li.key { border-left-color: var(--fg-faint); }
 
   /* ===================================================
-     SLIDE 10 — ROI
+     SLIDE 10 : ROI
      =================================================== */
   .s10-wrap {
     display: grid;
     grid-template-rows: auto 1fr;
-    gap: 56px;
+    gap: 48px;
     height: 100%;
   }
   .s10-grid {
@@ -1099,27 +1062,28 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 1px;
-    background: var(--line-soft);
+    background: var(--line);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
   .roi {
     background: var(--bg);
-    padding: 36px 36px 34px;
+    padding: 36px 30px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
   }
   .roi .num {
     font-family: var(--f-display);
-    font-size: 28px;
+    font-size: 40px;
+    line-height: 0.9;
     color: var(--ember);
     font-style: italic;
     font-weight: 300;
   }
   .roi .ttl {
     font-family: var(--f-display);
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.1;
     color: var(--fg);
     font-weight: 400;
@@ -1128,275 +1092,252 @@
   .roi .desc {
     font-family: var(--f-sans);
     font-size: 24px;
-    line-height: 1.5;
+    line-height: 1.45;
     color: var(--fg-mid);
     font-weight: 300;
   }
 
   /* ===================================================
-     SLIDE 11 — manifesto
+     SLIDE 11 : manifesto
      =================================================== */
   .s11-wrap {
     display: grid;
-    grid-template-rows: 1fr auto;
-    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
     height: 100%;
   }
-  .s11-stmt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1500px;
-  }
+  .s11-stmt { display: flex; flex-direction: column; gap: 28px; }
   .s11-title {
     font-family: var(--f-display);
-    font-size: 132px;
-    line-height: 0.96;
-    font-weight: 300;
+    font-size: 96px;
+    line-height: 0.95;
     color: var(--fg);
-    letter-spacing: -0.03em;
+    font-weight: 300;
     font-variation-settings: "opsz" 72;
-    margin: 0;
   }
   .s11-title .strike {
-    color: var(--fg-faint);
-    font-style: italic;
     text-decoration: line-through;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--pink);
-    font-weight: 300;
+    color: var(--fg-dim);
+    font-size: 64px;
+    display: block;
+    margin-bottom: 8px;
   }
-  .s11-title em { font-style: italic; color: var(--violet-light); font-weight: 400; }
+  .s11-title em { font-style: italic; color: var(--violet-light); }
   .s11-body {
-    font-size: 26px;
-    line-height: 1.5;
+    font-family: var(--f-sans);
+    font-size: 32px;
+    line-height: 1.4;
     color: var(--fg-mid);
     font-weight: 300;
-    max-width: 1100px;
   }
   .s11-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    border-top: 1px solid var(--line);
-    padding-top: 36px;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    border-left: 1px solid var(--line);
   }
   .feature .num {
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.20em;
     color: var(--ember);
   }
   .feature .ttl {
     font-family: var(--f-display);
-    font-size: 28px;
-    line-height: 1.15;
+    font-size: 30px;
     color: var(--fg);
+    line-height: 1.15;
     font-weight: 400;
-    margin: 14px 0 10px;
-    font-variation-settings: "opsz" 24;
+    font-variation-settings: "opsz" 28;
   }
   .feature .desc {
     font-family: var(--f-sans);
     font-size: 24px;
-    line-height: 1.5;
+    line-height: 1.45;
     color: var(--fg-mid);
     font-weight: 300;
   }
 
   /* ===================================================
-     SLIDE 12 — quote
+     SLIDE 12 : quote
      =================================================== */
+  .slide-12 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   .s12-wrap {
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    gap: 56px;
-    padding: 0 80px;
+    align-items: center;
+    gap: 36px;
   }
   .s12-mark {
     font-family: var(--f-display);
-    font-size: 360px;
-    line-height: 0.6;
-    background: linear-gradient(180deg, var(--violet-glow) 0%, var(--pink) 100%);
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
-    font-style: italic;
-    font-weight: 300;
-    height: 140px;
-    overflow: visible;
-    font-variation-settings: "opsz" 72;
+    font-size: 140px;
+    line-height: 0.5;
+    color: var(--ember);
+    opacity: 0.8;
   }
   .s12-quote {
     font-family: var(--f-display);
-    font-size: 84px;
-    line-height: 1.12;
-    font-weight: 300;
+    font-size: 68px;
+    line-height: 1.15;
     color: var(--fg);
-    letter-spacing: -0.02em;
-    max-width: 1500px;
-    font-variation-settings: "opsz" 72;
+    font-weight: 300;
     margin: 0;
+    text-wrap: balance;
+    font-variation-settings: "opsz" 72;
   }
-  .s12-quote em { font-style: italic; color: var(--violet-light); font-weight: 400; }
+  .s12-quote em {
+    font-style: italic;
+    color: var(--violet-light);
+  }
   .s12-attr {
     font-family: var(--f-mono);
     font-size: 24px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--fg-faint);
-    display: flex;
-    gap: 18px;
-    align-items: center;
-  }
-  .s12-attr::before {
-    content: "";
-    width: 60px; height: 1px;
-    background: var(--fg-faint);
-    display: inline-block;
+    color: var(--fg-mid);
   }
   .s12-coda {
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.30em;
+    letter-spacing: 0.20em;
     text-transform: uppercase;
-    color: var(--ember);
-    margin-top: 28px;
+    color: var(--fg-faint);
   }
 
   /* ===================================================
-     SLIDE 13 — next steps
+     SLIDE 13 : next steps
      =================================================== */
   .s13-wrap {
     display: grid;
     grid-template-rows: auto 1fr;
-    gap: 60px;
+    gap: 56px;
     height: 100%;
   }
   .s13-flow {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    position: relative;
-    align-items: start;
-  }
-  .s13-flow::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 5%;
-    right: 5%;
-    height: 1px;
-    background: linear-gradient(to right,
-      var(--ember) 0%,
-      var(--ember) 33%,
-      var(--line) 66%,
-      var(--line) 100%);
+    gap: 40px;
+    align-items: flex-start;
   }
   .step {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 0 26px;
+    gap: 16px;
     position: relative;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .step::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: 0;
+    width: 48px; height: 1px;
+    background: var(--ember);
   }
   .step .marker {
-    width: 68px; height: 68px;
-    border-radius: 50%;
-    background: var(--bg);
-    border: 1px solid var(--ember);
-    color: var(--ember);
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.04em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-  }
-  .step:nth-child(n+3) .marker {
-    border-color: var(--line);
-    color: var(--fg-mid);
+    letter-spacing: 0.22em;
+    color: var(--ember);
   }
   .step .ttl {
     font-family: var(--f-display);
-    font-size: 34px;
+    font-size: 36px;
     line-height: 1.1;
     color: var(--fg);
     font-weight: 400;
-    margin-top: 8px;
     font-variation-settings: "opsz" 32;
   }
   .step .desc {
     font-family: var(--f-sans);
     font-size: 24px;
-    line-height: 1.5;
+    line-height: 1.45;
     color: var(--fg-mid);
     font-weight: 300;
   }
 
   /* ===================================================
-     SLIDE 14 — closing
+     SLIDE 14 : closing
      =================================================== */
   .s14-wrap {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 96px;
-    height: 100%;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
     align-items: center;
+    height: 100%;
   }
   .s14-title {
     font-family: var(--f-display);
-    font-size: 156px;
+    font-size: 110px;
     line-height: 0.92;
-    font-weight: 300;
     color: var(--fg);
-    letter-spacing: -0.03em;
-    margin: 0;
+    font-weight: 300;
     font-variation-settings: "opsz" 72;
   }
-  .s14-title em { font-style: italic; color: var(--violet-light); font-weight: 400; }
-  .s14-body { font-size: 26px; line-height: 1.5; color: var(--fg-mid); margin-top: 36px; max-width: 720px; font-weight: 300; }
+  .s14-title em {
+    font-style: italic;
+    color: var(--violet-light);
+  }
+  .s14-body {
+    font-family: var(--f-sans);
+    font-size: 32px;
+    line-height: 1.4;
+    color: var(--fg-mid);
+    font-weight: 300;
+    margin-top: 28px;
+    max-width: 780px;
+  }
   .s14-card {
-    border: 1px solid var(--card-border);
-    padding: 44px 44px 40px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 48px 42px;
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    background: var(--card-bg);
-    backdrop-filter: blur(8px);
+    gap: 26px;
   }
-  .s14-card .lbl {
+  .s14-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .s14-row .lbl {
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     color: var(--fg-faint);
   }
-  .s14-card .val {
+  .s14-row .val {
     font-family: var(--f-display);
     font-size: 28px;
     color: var(--fg);
-    font-weight: 400;
-    font-variation-settings: "opsz" 32;
+    font-variation-settings: "opsz" 28;
   }
-  .s14-row { display: flex; flex-direction: column; gap: 6px; padding-bottom: 22px; border-bottom: 1px solid var(--line-soft); }
-  .s14-row:last-of-type { border-bottom: 0; padding-bottom: 0; }
   .s14-cta {
-    margin-top: 14px;
     font-family: var(--f-mono);
     font-size: 24px;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--ember);
+    text-decoration: none;
+    padding: 16px 0;
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 22px 0;
     border-top: 1px solid var(--ember);
     border-bottom: 1px solid var(--ember);
   }
@@ -1423,21 +1364,21 @@
   <!-- ===================== SLIDE 1 ===================== -->
   <section data-label="01 Title">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 001 / 015</div>
-    <div class="corner-tr" data-anim="fade" style="--d:200ms">A PERFORMANCE PROPOSAL</div>
+    <div class="corner-tr" data-anim="fade" style="--d:200ms">AN EDUCATIONAL PERFORMANCE PROPOSAL</div>
     <div class="crosshair tl"></div>
     <div class="crosshair br"></div>
 
     <div class="slide slide-01">
       <div class="s1-wrap">
         <div class="s1-top">
-          <div class="s1-eyebrow" data-anim="up" style="--d:120ms">NEURO &nbsp;·&nbsp; SELF — MASTERY</div>
+          <div class="s1-eyebrow" data-anim="up" style="--d:120ms">NEURO &nbsp;·&nbsp; SELF-MASTERY</div>
           <h1 class="s1-title" data-anim="push-in" style="--d:280ms">
             Rewiring the <br>
-            <span class="acc">Security</span> Mindset.
+            <span class="acc">Educational</span> Mindset.
           </h1>
           <p class="s1-sub" data-anim="up" style="--d:900ms">
             A neuroscience-informed performance programme<br>
-            for armed close-protection professionals.
+            for educators, school leaders, and learners.
           </p>
         </div>
         <div class="s1-bottom" data-anim="fade" style="--d:1300ms">
@@ -1455,7 +1396,7 @@
     </div>
   </section>
 
-  <!-- ===================== SLIDE 2 — Your Team Is Elite ===================== -->
+  <!-- ===================== SLIDE 2 : Your Staff Is Elite ===================== -->
   <section data-label="02 Elite">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 002 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">WHO WE ARE TALKING TO</div>
@@ -1463,22 +1404,22 @@
     <div class="slide slide-elite">
       <div class="s4-wrap">
         <div class="s4-left">
-          <div class="eyebrow" data-anim="up" style="--d:100ms">PROLOGUE · THE PEOPLE</div>
+          <div class="eyebrow" data-anim="up" style="--d:100ms">PROLOGUE · THE EDUCATORS</div>
           <h2 class="s4-title" data-anim="push-in" style="--d:260ms">
-            Your team is <em>elite.</em><br>
+            Your staff is <em>dedicated.</em><br>
             Here is the <em>next layer.</em>
           </h2>
           <p class="s4-body" data-anim="up" style="--d:720ms">
-            This proposal does not assume gaps in competence. It assumes the opposite. Your operatives are skilled, drilled, and combat-capable. The next gain isn't physical — it's neurological.
+            This proposal does not assume gaps in teaching competence. It assumes the opposite. Your educators are skilled, passionate, and deeply committed. The next gain is neurological: mastering stress, focus, and emotional co-regulation under relentless daily pressure.
           </p>
         </div>
         <div>
           <ol class="s4-list">
-            <li data-anim="pan-left" style="--d:880ms"><div class="idx">01</div><div class="txt">Fully trained, competent firearm carriers.</div></li>
-            <li data-anim="pan-left" style="--d:1000ms"><div class="idx">02</div><div class="txt">Trained for combat — the body and the weapon are sharp.</div></li>
-            <li data-anim="pan-left" style="--d:1120ms"><div class="idx">03</div><div class="txt">Fully trained in personal-security and close-protection service.</div></li>
-            <li data-anim="pan-left" style="--d:1240ms"><div class="idx">04</div><div class="txt">Already operating at a standard most teams aspire to.</div></li>
-            <li data-anim="pan-left" style="--d:1360ms"><div class="idx">05</div><div class="txt">The next gain is the brain under pressure — not more drills.</div></li>
+            <li data-anim="pan-left" style="--d:880ms"><div class="idx">01</div><div class="txt">Fully qualified, competent educational professionals.</div></li>
+            <li data-anim="pan-left" style="--d:1000ms"><div class="idx">02</div><div class="txt">Passionate subject matter and pedagogical skills.</div></li>
+            <li data-anim="pan-left" style="--d:1120ms"><div class="idx">03</div><div class="txt">Committed to learner development, pastoral care, and academic excellence.</div></li>
+            <li data-anim="pan-left" style="--d:1240ms"><div class="idx">04</div><div class="txt">Already operating at a standard most institutions aspire to.</div></li>
+            <li data-anim="pan-left" style="--d:1360ms"><div class="idx">05</div><div class="txt">The next gain is the brain under pressure: cognitive stamina and regulation, not more workload.</div></li>
           </ol>
         </div>
       </div>
@@ -1495,40 +1436,40 @@
         <div class="s2-head">
           <div class="eyebrow" data-anim="up" style="--d:100ms">CHAPTER ONE · WHERE THE NEXT LAYER LIVES</div>
           <h2 class="display" data-anim="up" style="--d:280ms; max-width: 1700px;">
-            Tactical training is the floor.<br>The <em>brain under fire</em> is the ceiling.
+            Pedagogical skill is the floor.<br>The <em>brain under pressure</em> is the ceiling.
           </h2>
           <p class="body" data-anim="up" style="--d:520ms">
-            Skilled operatives already know what to do. The question elite work asks is whether the nervous system will let them do it — under threat, under load, under pressure. Four challenges sit between training and outcome.
+            Skilled educators know what to teach. The question modern schooling asks is whether the nervous system will sustain them under cognitive overload, behavioural volatility, and continuous pressure. Four challenges sit between teaching and outcome.
           </p>
         </div>
         <hr class="rule" data-anim="wipe" style="--d:760ms" />
         <div class="s2-quads">
           <div class="quad" data-anim="up" style="--d:900ms">
             <div class="num">01</div>
-            <div class="ttl">Beyond Bouncing</div>
-            <div class="desc">Crowd-control habits travel. Close-protection demands a different posture — discreet, low-affect, principal-focused. That posture is trainable.</div>
+            <div class="ttl">Classroom Pressure</div>
+            <div class="desc">Diverse learner needs, behavioural friction, and disciplinary challenges drain emotional reserves. Maintaining calm authority is a trainable neurological skill.</div>
           </div>
           <div class="quad" data-anim="up" style="--d:1020ms">
             <div class="num">02</div>
             <div class="ttl">Stress Chemistry</div>
-            <div class="desc">Under threat, the body floods the system with stress hormones. Without regulation tools, even capable operatives can over-respond.</div>
+            <div class="desc">Continuous school demands flood the body with stress hormones. Without regulation tools, even experienced educators experience reactivity and fatigue.</div>
           </div>
           <div class="quad" data-anim="up" style="--d:1140ms">
             <div class="num">03</div>
-            <div class="ttl">Cognitive Load</div>
-            <div class="desc">High-pressure environments narrow judgement. Survival mode is a feature of the brain — not a flaw of the operative.</div>
+            <div class="ttl">Decision Fatigue</div>
+            <div class="desc">Hundreds of micro-decisions every period drain cognitive stamina. Survival mode impairs patience and creative teaching: a natural brain feature, not a personal flaw.</div>
           </div>
           <div class="quad" data-anim="up" style="--d:1260ms">
             <div class="num">04</div>
-            <div class="ttl">Perceptual Narrowing</div>
-            <div class="desc">Chronic stress shrinks the visual scan. The very people trained to see threats first start losing access to peripheral signals.</div>
+            <div class="ttl">Teacher Burnout</div>
+            <div class="desc">Chronic stress leads to emotional exhaustion, absenteeism, and educator attrition. Protecting the brain protects institutional continuity.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 3 ===================== -->
+  <!-- ===================== SLIDE 4 ===================== -->
   <section data-label="04 The Stakes">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 004 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">THE STAKES</div>
@@ -1540,31 +1481,31 @@
         <div class="s2-head">
           <div class="eyebrow" data-anim="up" style="--d:100ms">CHAPTER TWO · THE STAKES</div>
           <h2 class="display" data-anim="up" style="--d:240ms">
-            Emotional failure is an <em>operational risk.</em>
+            Emotional dysregulation is an <em>institutional risk.</em>
           </h2>
         </div>
         <div class="s3-stats">
           <div class="stat" data-anim="push-in" style="--d:520ms">
             <div class="figure">73<span class="unit">%</span></div>
-            <div class="label">of security incidents involve a human behavioural failure — not a tactical one.</div>
+            <div class="label">of educator burnout and classroom friction stems from dysregulated stress responses: not a lack of pedagogical competence.</div>
           </div>
           <div class="stat" data-anim="push-in" style="--d:720ms">
             <div class="figure">4<span class="unit">×</span></div>
-            <div class="label">more likely to escalate a situation when the nervous system is dysregulated.</div>
+            <div class="label">more likely for classroom tension to escalate when either the educator or learner's nervous system is dysregulated.</div>
           </div>
           <div class="stat" data-anim="push-in" style="--d:920ms">
             <div class="figure">1<span class="unit">sec</span></div>
-            <div class="label">is all it takes for emotion to override years of tactical training.</div>
+            <div class="label">is all it takes for acute stress to override years of teaching experience and professional patience.</div>
           </div>
         </div>
         <p class="s3-foot" data-anim="up" style="--d:1180ms">
-          In the security sector, behavioural failure is a <strong>liability</strong>, a <strong>reputational risk</strong>, and a <strong>contractual risk</strong>. The answer is not more tactical training. It is building the brain's capacity to perform under pressure.
+          In schools, chronic stress and teacher burnout represent a serious <strong>academic risk</strong>, a <strong>cultural risk</strong>, and a <strong>staff retention risk</strong>. The solution is not more administrative workload, but building the brain's capacity to regulate and perform under pressure.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 4 ===================== -->
+  <!-- ===================== SLIDE 5 ===================== -->
   <section data-label="05 The Solution">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 005 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">THE SOLUTION</div>
@@ -1578,23 +1519,23 @@
             <em>Neuro Self-Mastery.</em>
           </h2>
           <p class="s4-body" data-anim="up" style="--d:720ms">
-            A neuroscience-informed performance programme equipping your security operatives with the brain-based tools to think clearly, act precisely, and lead professionally — under any level of threat.
+            A neuroscience-informed performance programme equipping educators, school leadership, and learners with practical brain-based tools to think clearly, regulate emotion, and lead with composure under pressure.
           </p>
         </div>
         <div>
           <ol class="s4-list">
-            <li data-anim="pan-left" style="--d:880ms"><div class="idx">01</div><div class="txt">Understand how the brain responds to threat and pressure.</div></li>
-            <li data-anim="pan-left" style="--d:1000ms"><div class="idx">02</div><div class="txt">Regulate the nervous system before, during, and after incidents.</div></li>
-            <li data-anim="pan-left" style="--d:1120ms"><div class="idx">03</div><div class="txt">Make better decisions in high-stakes, time-critical situations.</div></li>
-            <li data-anim="pan-left" style="--d:1240ms"><div class="idx">04</div><div class="txt">Build EQ and conduct befitting a close-protection specialist.</div></li>
-            <li data-anim="pan-left" style="--d:1360ms"><div class="idx">05</div><div class="txt">Sustain high performance without burnout or emotional blowback.</div></li>
+            <li data-anim="pan-left" style="--d:880ms"><div class="idx">01</div><div class="txt">Understand how the brain responds to stress, learning, and cognitive load.</div></li>
+            <li data-anim="pan-left" style="--d:1000ms"><div class="idx">02</div><div class="txt">Regulate the nervous system before, during, and after high-friction situations.</div></li>
+            <li data-anim="pan-left" style="--d:1120ms"><div class="idx">03</div><div class="txt">Make sound, calm decisions in demanding, time-critical school moments.</div></li>
+            <li data-anim="pan-left" style="--d:1240ms"><div class="idx">04</div><div class="txt">Build emotional co-regulation, empathy, and constructive classroom culture.</div></li>
+            <li data-anim="pan-left" style="--d:1360ms"><div class="idx">05</div><div class="txt">Sustain high energy and teaching passion without emotional exhaustion.</div></li>
           </ol>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 5 ===================== -->
+  <!-- ===================== SLIDE 6 ===================== -->
   <section data-label="06 The Strategist">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 006 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">THE STRATEGIST</div>
@@ -1614,7 +1555,7 @@
             Human Behaviour &amp; Performance Strategist &nbsp;·&nbsp; Founder, Neuro Self-Mastery
           </div>
           <p class="s5-bio" data-anim="up" style="--d:760ms">
-            A neuroscience-informed performance strategist with over a decade of experience translating complex brain science into practical, high-impact tools for individuals and organisations under pressure. Her work sits at the intersection of neuroscience, emotional regulation, decision-making, and leadership — producing durable behavioural change, not temporary relief.
+            A neuroscience-informed performance strategist with over a decade of experience translating complex brain science into practical, high-impact tools for educators, leaders, and organisations under pressure. Her work sits at the intersection of cognitive neuroscience, emotional regulation, decision-making, and leadership: producing durable behavioural change, not temporary relief.
           </p>
           <div class="s5-areas" data-anim="up" style="--d:920ms">
             <span class="chip">Neuroscience of stress &amp; cognition</span>
@@ -1627,59 +1568,59 @@
     <div class="corner-bl" data-anim="fade" style="--d:1100ms">neuro-selfmastery.com</div>
   </section>
 
-  <!-- ===================== SLIDE 6 ===================== -->
+  <!-- ===================== SLIDE 7 ===================== -->
   <section data-label="07 Built for Sector">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 007 / 015</div>
-    <div class="corner-tr" data-anim="fade" style="--d:200ms">PROGRAMME · SECTOR</div>
+    <div class="corner-tr" data-anim="fade" style="--d:200ms">PROGRAMME · SCHOOLS</div>
 
     <div class="slide slide-06">
       <div class="s6-wrap">
         <div class="s6-head">
-          <div class="eyebrow" data-anim="up" style="--d:100ms">PURPOSE-BUILT FOR YOUR SECTOR</div>
+          <div class="eyebrow" data-anim="up" style="--d:100ms">PURPOSE-BUILT FOR SCHOOLS</div>
           <h2 class="display" data-anim="up" style="--d:260ms" style="max-width:1700px">
-            Built specifically for <em>armed professionals.</em>
+            Built specifically for <em>schools and educators.</em>
           </h2>
           <p class="body" data-anim="up" style="--d:480ms">
-            Not a generic wellness programme. Every module has been contextualised for the realities of defence and close-protection work.
+            Not a generic wellness seminar. Every module has been contextualised for the realities of modern education, classroom dynamics, and school leadership.
           </p>
         </div>
         <div class="s6-grid">
           <div class="mod" data-anim="up" style="--d:720ms">
             <div class="num">MODULE 01</div>
-            <div class="ttl">Threat Response Regulation</div>
-            <div class="desc">Recognise the neurological signs of threat-state activation and apply rapid regulation before a situation escalates.</div>
+            <div class="ttl">Stress &amp; Threat Response</div>
+            <div class="desc">Recognise the neurological triggers of stress activation and apply rapid regulation in the classroom before situations escalate.</div>
           </div>
           <div class="mod" data-anim="up" style="--d:820ms">
             <div class="num">MODULE 02</div>
-            <div class="ttl">Situational Awareness</div>
-            <div class="desc">How chronic stress narrows perception — and how to maintain a wide, pre-attentive threat scan through nervous-system tools.</div>
+            <div class="ttl">Cognitive Focus &amp; Attention</div>
+            <div class="desc">How chronic pressure impairs attention and memory in educators and learners, and how to restore deep focus using nervous-system tools.</div>
           </div>
           <div class="mod" data-anim="up" style="--d:920ms">
             <div class="num">MODULE 03</div>
-            <div class="ttl">Impulse &amp; Aggression Control</div>
-            <div class="desc">The neuroscience of reactive aggression — building the capacity to pause between stimulus and response, even under fire.</div>
+            <div class="ttl">Emotional Regulation &amp; Patience</div>
+            <div class="desc">The neuroscience of emotional reactivity: building the capacity to pause between stimulus and response during challenging interactions.</div>
           </div>
           <div class="mod" data-anim="up" style="--d:1020ms">
             <div class="num">MODULE 04</div>
-            <div class="ttl">Professional EQ for Close-Protection</div>
-            <div class="desc">From principal interaction to team dynamics: the emotional intelligence required to operate at the highest levels of service.</div>
+            <div class="ttl">Co-Regulation &amp; Classroom EQ</div>
+            <div class="desc">From learner engagement to staffroom dynamics: the emotional intelligence required to foster calm, high-trust learning environments.</div>
           </div>
           <div class="mod" data-anim="up" style="--d:1120ms">
             <div class="num">MODULE 05</div>
-            <div class="ttl">Command Presence Under Pressure</div>
-            <div class="desc">Confidence and authority are neurological states. Learn to access them on demand, even in extreme or prolonged threat.</div>
+            <div class="ttl">Leadership Presence Under Pressure</div>
+            <div class="desc">Composed authority is a neurological state. Learn to access grounded presence on demand during demanding school terms.</div>
           </div>
           <div class="mod" data-anim="up" style="--d:1220ms">
             <div class="num">MODULE 06</div>
-            <div class="ttl">Sustainable Operational Fitness</div>
-            <div class="desc">Prevent the cumulative cognitive and emotional toll of sustained high-threat work — sharp, every shift.</div>
+            <div class="ttl">Sustainable Educator Vitality</div>
+            <div class="desc">Prevent the cumulative cognitive and emotional toll of school pressure: remaining energized, inspired, and sharp every term.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 7 ===================== -->
+  <!-- ===================== SLIDE 8 : Delivery & Pricing ===================== -->
   <section data-label="08 Delivery">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 008 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">DELIVERY &amp; INVESTMENT</div>
@@ -1687,51 +1628,58 @@
     <div class="slide slide-07">
       <div class="s7-wrap">
         <div class="s6-head">
-          <div class="eyebrow" data-anim="up" style="--d:100ms">PROGRAMME DELIVERY</div>
+          <div class="eyebrow" data-anim="up" style="--d:100ms">PROGRAMME DELIVERY &amp; INVESTMENT</div>
           <h2 class="display" data-anim="up" style="--d:260ms">
             Your programme, <em>your way.</em>
           </h2>
           <p class="body" data-anim="up" style="--d:460ms">
-            Customised to your organisation's size, structure and operational context. Available in-person or virtually.
-			<br>
-			          Final pricing determined by group size, delivery format &amp; specific requirements.
+            Customised to your school's size, structure, and operational context. Available in-person or virtually.
+            <br>
+            Final pricing determined by group size, delivery format &amp; specific requirements.
           </p>
         </div>
         <div class="s7-tiers">
           <div class="tier" data-anim="up" style="--d:680ms">
             <div class="num">01</div>
             <div class="name">Introductory<br>Session</div>
-            <div class="meta">90–120 min · Workshop</div>
-            <div class="desc">Organisation-wide introduction to the framework. Ideal for first exposure across all ranks.</div>
-            <div class="price"><small>From</small>R 15&nbsp;000 – R 30&nbsp;000</div>
+            <div class="meta">90-120 min · Workshop</div>
+            <div class="desc">School-wide introduction to the framework. Ideal for teacher development days and initial staff exposure.</div>
+            <div class="price"><small>From</small>R 15 000 - R 30 000</div>
           </div>
           <div class="tier featured" data-anim="up" style="--d:800ms">
             <div class="num">02</div>
             <div class="name">Core<br>Programme</div>
-            <div class="meta">3–4 Workshops</div>
-            <div class="desc">Full framework rollout for teams or business units. Builds practical tools that operate in the field.</div>
-            <div class="price"><small>Investment</small>R 60&nbsp;000 – R 75&nbsp;000</div>
+            <div class="meta">3-4 Workshops</div>
+            <div class="desc">Full framework rollout for grade heads, departments, or whole school staff. Builds practical classroom tools.</div>
+            <div class="price"><small>Investment</small>R 60 000 - R 75 000</div>
           </div>
           <div class="tier" data-anim="up" style="--d:920ms">
             <div class="num">03</div>
             <div class="name">Leadership<br>Track</div>
             <div class="meta">Tailored Sessions</div>
-            <div class="desc">For supervisors, team leads and operations managers responsible for performance under pressure.</div>
-            <div class="price"><small>Investment</small>R 100&nbsp;000 – R 250&nbsp;000</div>
+            <div class="desc">For principals, deputies, HODs, and school management teams responsible for institutional culture.</div>
+            <div class="price"><small>Investment</small>R 100 000 - R 250 000</div>
           </div>
           <div class="tier" data-anim="up" style="--d:1040ms">
             <div class="num">04</div>
             <div class="name">Executive<br>Intensive</div>
-            <div class="meta">High-Impact Sessions</div>
-            <div class="desc">Bespoke programme for owners, directors and senior management of armed-services providers.</div>
-            <div class="price"><small>Investment</small>R 150&nbsp;000 – R 350&nbsp;000</div>
+            <div class="meta">High-Impact</div>
+            <div class="desc">Bespoke programme for school governing bodies, executive heads, and senior leadership.</div>
+            <div class="price"><small>Investment</small>R 150 000 - R 350 000</div>
+          </div>
+          <div class="tier" data-anim="up" style="--d:1160ms">
+            <div class="num">05</div>
+            <div class="name">Game<br>Facilitation</div>
+            <div class="meta">Interactive Game</div>
+            <div class="desc">Neuro Self-Mastery game facilitation: experiential neuroplasticity and regulation training for staff and learners.</div>
+            <div class="price"><small>Specialised</small>Tailored Proposal</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 8 ===================== -->
+  <!-- ===================== SLIDE 9 ===================== -->
   <section data-label="09 Curriculum">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 009 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">CURRICULUM</div>
@@ -1748,44 +1696,44 @@
           <div class="topic" data-anim="up" style="--d:460ms">
             <div class="num">01</div>
             <div class="body-col">
-              <div class="ttl">The Threat Brain</div>
-              <div class="desc">How the brain's survival circuitry activates under threat — and why standard training can fail when the amygdala takes over.</div>
+              <div class="ttl">The Stress Brain</div>
+              <div class="desc">How the brain's survival circuitry activates under pressure: and why standard teaching approaches can stall when the amygdala takes over.</div>
             </div>
           </div>
           <div class="topic" data-anim="up" style="--d:560ms">
             <div class="num">02</div>
             <div class="body-col">
               <div class="ttl">Nervous System Regulation</div>
-              <div class="desc">Evidence-based techniques to regulate the autonomic nervous system before, during, and after high-stress incidents.</div>
+              <div class="desc">Evidence-based techniques to regulate the autonomic nervous system before, during, and after high-stress school incidents.</div>
             </div>
           </div>
           <div class="topic" data-anim="up" style="--d:660ms">
             <div class="num">03</div>
             <div class="body-col">
-              <div class="ttl">Decision-Making Under Fire</div>
-              <div class="desc">How cognitive load and stress hormones impair judgement — and how to build a faster, cleaner decision pathway.</div>
+              <div class="ttl">Decision-Making Under Load</div>
+              <div class="desc">How cognitive fatigue impairs pedagogical judgement: and how to build faster, clearer decision pathways during demanding days.</div>
             </div>
           </div>
           <div class="topic featured" data-anim="up" style="--d:760ms">
             <div class="num">04</div>
             <div class="body-col">
               <div class="focus-tag">Primary emphasis</div>
-              <div class="ttl">EQ in the Field</div>
-              <div class="desc">The core upgrade: This trains your operatives to be <strong style="color: var(--fg);">less combative</strong> and to <strong style="color: var(--fg);">defuse situations that can be defused</strong>, holding composure with principals without ever losing tactical readiness.</div>
+              <div class="ttl">Co-Regulation &amp; Classroom EQ</div>
+              <div class="desc">The core upgrade: Trains educators to be <strong style="color: var(--fg);">less reactive</strong> and to <strong style="color: var(--fg);">defuse classroom tensions proactively</strong>, holding calm authority without escalating friction.</div>
             </div>
           </div>
           <div class="topic" data-anim="up" style="--d:860ms">
             <div class="num">05</div>
             <div class="body-col">
               <div class="ttl">Impulse &amp; Proportionality</div>
-              <div class="desc">The neuroscience of reactive aggression — and building neural pathways that support proportionate, professional response.</div>
+              <div class="desc">The neuroscience of emotional reactivity: building neural pathways that support calm, constructive, and proportionate disciplinary responses.</div>
             </div>
           </div>
           <div class="topic" data-anim="up" style="--d:960ms">
             <div class="num">06</div>
             <div class="body-col">
               <div class="ttl">Sustainable High Performance</div>
-              <div class="desc">Preventing burnout, maintaining alertness across long operations, and recovery protocols that hold.</div>
+              <div class="desc">Preventing teacher burnout, maintaining cognitive vitality across long academic terms, and practical recovery protocols that hold.</div>
             </div>
           </div>
         </div>
@@ -1793,7 +1741,7 @@
     </div>
   </section>
 
-  <!-- ===================== SLIDE 9 ===================== -->
+  <!-- ===================== SLIDE 10 ===================== -->
   <section data-label="10 Before / After">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 010 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">THE TRANSFORMATION</div>
@@ -1806,30 +1754,30 @@
             From <em>reactive</em> to <em>responsive.</em>
           </h2>
           <p class="s9-lead" data-anim="up" style="--d:400ms">
-            Your team is already high-performing and efficient. The shift we train for is <strong>less combative, more composed</strong> — the discipline to <strong>defuse situations that can be defused</strong>, without ever losing the edge that makes them effective.
+            Your teaching staff is already skilled and dedicated. The shift we train for is <strong>less reactive, more composed</strong>: the discipline to <strong>defuse classroom tensions proactively</strong>, without losing instructional authority.
           </p>
         </div>
         <div class="s9-cols">
           <div data-anim="pan-right" style="--d:600ms">
             <div class="col-head before">Before · Without Neuro Self-Mastery</div>
             <ul class="ba-list before">
-              <li class="key">Combative by default — reactive under threat, quick to escalate situations that could be defused.</li>
-              <li>Limited EQ — bouncer habits persist in close-protection.</li>
-              <li>Stress-impaired judgement, disproportionate responses.</li>
-              <li>Missed threat indicators from perceptual narrowing.</li>
-              <li>Burnout from unmanaged chronic operational stress.</li>
-              <li>Reputational and legal liability from incidents.</li>
+              <li class="key">Reactive under classroom stress: quick to feel drained by behavioural disruptions.</li>
+              <li>Compassion fatigue and emotional depletion during long academic terms.</li>
+              <li>Stress-impaired patience, leading to reactive disciplinary escalation.</li>
+              <li>Decreased student engagement and disrupted learning environments.</li>
+              <li>Teacher burnout, chronic fatigue, and higher staff absenteeism.</li>
+              <li>Institutional friction and staff turnover.</li>
             </ul>
           </div>
           <div data-anim="pan-left" style="--d:780ms">
             <div class="col-head after">After · With Neuro Self-Mastery</div>
             <ul class="ba-list after">
-              <li class="key"><strong style="color: var(--fg); font-weight:500;">Professional EQ</strong> — responsive, not reactive. De-escalates first, defuses without force, holds authority without combativeness.</li>
-              <li>Clear, proportionate decisions under extreme pressure.</li>
-              <li>Wide, sustained situational awareness across long operations.</li>
-              <li>Trusted, discreet and principal-focused at all times.</li>
-              <li>Sustained peak performance through regulated cognitive load.</li>
-              <li>Reduced liability — operatives who reflect well on the company.</li>
+              <li class="key"><strong style="color: var(--fg); font-weight:500;">Classroom Co-Regulation</strong>: responsive, not reactive. De-escalates conflict, builds high-trust classrooms, holds authority with empathy.</li>
+              <li>Clear, calm decisions under intense classroom and administrative pressure.</li>
+              <li>Sustained focus, patience, and attentiveness across full school days.</li>
+              <li>High learner engagement supported by emotionally regulated educators.</li>
+              <li>Sustained teacher vitality and reduced burnout through managed cognitive load.</li>
+              <li>Thriving school culture and strong educator retention.</li>
             </ul>
           </div>
         </div>
@@ -1837,7 +1785,7 @@
     </div>
   </section>
 
-  <!-- ===================== SLIDE 10 ===================== -->
+  <!-- ===================== SLIDE 11 ===================== -->
   <section data-label="11 ROI">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 011 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">RETURN ON INVESTMENT</div>
@@ -1853,40 +1801,40 @@
         <div class="s10-grid">
           <div class="roi" data-anim="up" style="--d:460ms">
             <div class="num">i.</div>
-            <div class="ttl">Reduced Legal Liability</div>
-            <div class="desc">Emotionally regulated operatives produce fewer incidents, complaints and legal exposures — protecting your contracts.</div>
+            <div class="ttl">Enhanced Academic Outcomes</div>
+            <div class="desc">Emotionally regulated classrooms allow learners' brains to focus, retain knowledge, and achieve higher academic success.</div>
           </div>
           <div class="roi" data-anim="up" style="--d:560ms">
             <div class="num">ii.</div>
-            <div class="ttl">Stronger Client Retention</div>
-            <div class="desc">Clients retain providers whose teams display professionalism, discretion and EQ alongside physical competence.</div>
+            <div class="ttl">Reduced Teacher Turnover</div>
+            <div class="desc">Staff equipped with stress regulation tools show significantly lower burnout and attrition, reducing recruitment and relief costs.</div>
           </div>
           <div class="roi" data-anim="up" style="--d:660ms">
             <div class="num">iii.</div>
-            <div class="ttl">Lower Staff Turnover</div>
-            <div class="desc">Teams equipped with stress regulation tools show significantly lower burnout and attrition — and rehiring cost.</div>
+            <div class="ttl">Improved Learner Behaviour</div>
+            <div class="desc">Educator co-regulation directly reduces behavioural incidents, disciplinary referrals, and classroom disruptions.</div>
           </div>
           <div class="roi" data-anim="up" style="--d:760ms">
             <div class="num">iv.</div>
-            <div class="ttl">Higher Operational Quality</div>
-            <div class="desc">Clearer decision-making and better situational awareness directly reduces errors, near-misses and operational failures.</div>
+            <div class="ttl">Stronger School Leadership</div>
+            <div class="desc">Equips principals, deputies, and HODs with emotional poise, clear communication, and conflict-resolution capability.</div>
           </div>
           <div class="roi" data-anim="up" style="--d:860ms">
             <div class="num">v.</div>
-            <div class="ttl">Competitive Differentiation</div>
-            <div class="desc">Position as the security partner that invests in full-spectrum development — not just tactical competence.</div>
+            <div class="ttl">Institutional Reputation</div>
+            <div class="desc">Parents and communities value schools that lead in holistic, neuroscience-informed educator and learner wellbeing.</div>
           </div>
           <div class="roi" data-anim="up" style="--d:960ms">
             <div class="num">vi.</div>
-            <div class="ttl">Leadership Pipeline</div>
-            <div class="desc">Operatives who master themselves become team leaders. The programme builds your next generation of command.</div>
+            <div class="ttl">Healthier School Culture</div>
+            <div class="desc">A calm, connected staff culture fosters collaboration, psychological safety, and an inspiring educational community.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 11 ===================== -->
+  <!-- ===================== SLIDE 12 ===================== -->
   <section data-label="12 Performance Science">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 012 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">DIFFERENTIATION</div>
@@ -1900,36 +1848,36 @@
             This is <em>performance science.</em>
           </h2>
           <p class="s11-body" data-anim="up" style="--d:780ms">
-            Generic EQ or wellness programmes weren't built for people who carry firearms and operate at extreme stress thresholds. Neuro Self-Mastery was.
+            Generic wellness workshops weren't built for the intense cognitive and emotional demands of modern school environments. Neuro Self-Mastery was.
           </p>
         </div>
         <div class="s11-grid">
           <div class="feature" data-anim="up" style="--d:1000ms">
             <div class="num">01</div>
             <div class="ttl">Evidence-Based, Not Motivational</div>
-            <div class="desc">Grounded in peer-reviewed neuroscience — not pop psychology. Every tool has a neurological mechanism behind it.</div>
+            <div class="desc">Grounded in peer-reviewed neuroscience, not pop psychology. Every tool has a neurological mechanism behind it.</div>
           </div>
           <div class="feature" data-anim="up" style="--d:1100ms">
             <div class="num">02</div>
-            <div class="ttl">Contextualised for the Sector</div>
-            <div class="desc">Scenarios, language and examples drawn directly from defence, protection and security environments.</div>
+            <div class="ttl">Contextualised for Schools</div>
+            <div class="desc">Scenarios, language, and examples drawn directly from classroom dynamics, staffrooms, and educational leadership.</div>
           </div>
           <div class="feature" data-anim="up" style="--d:1200ms">
             <div class="num">03</div>
             <div class="ttl">Practical, Not Theoretical</div>
-            <div class="desc">Every session delivers tools that can be applied immediately — in the field, before a shift, in a threat scenario.</div>
+            <div class="desc">Every session delivers tools that can be applied immediately: in the classroom, before a lesson, or in high-stress moments.</div>
           </div>
           <div class="feature" data-anim="up" style="--d:1300ms">
             <div class="num">04</div>
             <div class="ttl">Durable Behavioural Change</div>
-            <div class="desc">Not a one-day seminar that fades. The programme builds new neural pathways that produce lasting performance shifts.</div>
+            <div class="desc">Not a one-day seminar that fades. The programme builds new neural pathways that produce lasting cultural shifts.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 12 ===================== -->
+  <!-- ===================== SLIDE 13 ===================== -->
   <section data-label="13 Quote">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 013 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">A PHILOSOPHY</div>
@@ -1942,19 +1890,19 @@
       <div class="s12-wrap">
         <div class="s12-mark" data-anim="push-in" style="--d:200ms">“</div>
         <blockquote class="s12-quote" data-anim="up" style="--d:520ms">
-          When you understand how your brain works, you gain the <em>power to lead</em> your life, your conduct and your performance — <em>on purpose.</em>
+          When you understand how your brain works, you gain the <em>power to lead</em> your life, your learning, and your performance : <em>on purpose.</em>
         </blockquote>
         <div class="s12-attr" data-anim="fade" style="--d:1100ms">
           Dr. Terry-Leigh Oliphant &nbsp;·&nbsp; Founder, Neuro Self-Mastery
         </div>
         <div class="s12-coda" data-anim="fade" style="--d:1380ms">
-          Rewire your brain. &nbsp;·&nbsp; Reset your team. &nbsp;·&nbsp; Protect your business.
+          Rewire your brain. &nbsp;·&nbsp; Reset your school. &nbsp;·&nbsp; Inspire your learners.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 13 ===================== -->
+  <!-- ===================== SLIDE 14 ===================== -->
   <section data-label="14 Next Steps">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 014 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">NEXT STEPS</div>
@@ -1964,7 +1912,7 @@
         <div class="s6-head">
           <div class="eyebrow" data-anim="up" style="--d:100ms">PROPOSED NEXT STEPS</div>
           <h2 class="display" data-anim="up" style="--d:260ms">
-            Let's build <em>your programme.</em>
+            Let's build <em>your school's programme.</em>
           </h2>
           <p class="body" data-anim="up" style="--d:460ms">
             A measured engagement, designed to be low-risk on the on-ramp and high-impact on rollout.
@@ -1974,29 +1922,29 @@
           <div class="step" data-anim="up" style="--d:680ms">
             <div class="marker">01</div>
             <div class="ttl">Discovery Call</div>
-            <div class="desc">A 30-minute conversation to understand your team size, operational context and key performance pain points.</div>
+            <div class="desc">A 30-minute conversation to understand your school size, staff context, and key educational priorities.</div>
           </div>
           <div class="step" data-anim="up" style="--d:820ms">
             <div class="marker">02</div>
             <div class="ttl">Customised Proposal</div>
-            <div class="desc">Dr. Terry-Leigh prepares a tailored programme proposal with delivery format, modules, timeline and investment.</div>
+            <div class="desc">Dr. Terry-Leigh prepares a tailored programme proposal with delivery format, modules, timeline, and investment.</div>
           </div>
           <div class="step" data-anim="up" style="--d:960ms">
             <div class="marker">03</div>
             <div class="ttl">Introductory Session</div>
-            <div class="desc">A 90-minute introductory workshop — low risk, high impact, full team exposure.</div>
+            <div class="desc">A 90-minute introductory workshop: low risk, high impact, full staff exposure.</div>
           </div>
           <div class="step" data-anim="up" style="--d:1100ms">
             <div class="marker">04</div>
             <div class="ttl">Full Programme Rollout</div>
-            <div class="desc">Based on feedback, we deliver the full programme across your team, leadership and management layers.</div>
+            <div class="desc">Based on feedback, we deliver the full programme across your educators, leadership, and learner groups.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SLIDE 14 ===================== -->
+  <!-- ===================== SLIDE 15 ===================== -->
   <section data-label="15 Closing">
     <div class="corner-tl" data-anim="fade" style="--d:200ms">NSM · 015 / 015</div>
     <div class="corner-tr" data-anim="fade" style="--d:200ms">CONTACT</div>
@@ -2008,10 +1956,10 @@
         <div>
           <div class="eyebrow" data-anim="up" style="--d:100ms">NEURO SELF-MASTERY</div>
           <h2 class="s14-title" data-anim="push-in" style="--d:260ms" style="margin-top: 28px;">
-            Ready to <em>rewire</em><br>your team?
+            Ready to <em>rewire</em><br>your school?
           </h2>
           <p class="s14-body" data-anim="up" style="--d:720ms">
-            Let's have a conversation. We're ready to tailor this programme to your security company — at your pace, in your context.
+            Let's have a conversation. We are ready to tailor this programme to your school: at your pace, in your context.
           </p>
         </div>
         <div class="s14-card" data-anim="pan-left" style="--d:520ms">
@@ -2041,7 +1989,7 @@
 
 <script src="deck-stage.js"></script>
 <script>
-// Browser fullscreen toggle — press "F" to enter/exit fullscreen presentation mode.
+// Browser fullscreen toggle : press "F" to enter/exit fullscreen presentation mode.
 document.addEventListener('keydown', (e) => {
   if (e.key === 'f' || e.key === 'F') {
     if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
