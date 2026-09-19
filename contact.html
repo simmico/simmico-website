@@ -1,223 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get in touch with Simmico — via WhatsApp, email, or phone.">
-  <meta property="og:title" content="Contact Simmico">
-  <meta name="theme-color" content="#72c9bf">
-  <title>Contact — Simmico</title>
+  <meta name="description" content="Contact Simmico directly via WhatsApp, phone, or email. Speak directly with senior software engineers and marketing strategists in Cape Town.">
+  <meta property="og:title" content="Contact | Simmico">
+  <meta property="og:description" content="Direct communication with senior engineers and growth strategists. No contact forms, no ticket queues.">
+  <meta name="theme-color" content="#14b8a6">
+  <title>Contact | Simmico</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="manifest" href="/manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-<header class="desktop-header">
-  <nav class="desktop-nav">
-    <a href="/index.html" class="nav-logo"><span class="lp">Simmi</span><span class="ls">co</span></a>
-    <ul class="nav-links">
-      <li><a href="/index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="/it/index.html">IT Services <span class="dropdown-arrow">▾</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="/it/web-development.html">Web Development</a></li>
-          <li><a href="/it/app-development.html">App Development</a></li>
-          <li><a href="/it/ai-automation.html">AI &amp; Automation</a></li>
-          <li><a href="/it/cloud-infrastructure.html">Cloud &amp; Infrastructure</a></li>
-          <li><a href="/it/cybersecurity.html">Cybersecurity</a></li>
-          <li><a href="/it/support-admin.html">IT Support &amp; Admin</a></li>
-          <li><a href="/it/software-integration.html">Software Integration</a></li>
-          <li><a href="/it/network-systems.html">Network &amp; Systems</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="/marketing/index.html">Marketing <span class="dropdown-arrow">▾</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="/marketing/brand-strategy.html">Brand Strategy</a></li>
-          <li><a href="/marketing/digital-marketing.html">Digital Marketing</a></li>
-          <li><a href="/marketing/content-creation.html">Content Creation</a></li>
-          <li><a href="/marketing/social-media.html">Social Media</a></li>
-          <li><a href="/marketing/seo-performance.html">SEO Performance</a></li>
-          <li><a href="/marketing/paid-advertising.html">Paid Advertising</a></li>
-          <li><a href="/marketing/campaign-management.html">Campaign Management</a></li>
-          <li><a href="/marketing/photography-video.html">Photography &amp; Video</a></li>
-        </ul>
-      </li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<!-- 1. TOP NAVIGATION -->
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="brand-logo" aria-label="Simmico Home">
+      Simmico
+    </a>
+
+    <nav class="nav-menu" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="solutions.html" class="nav-link">Solutions</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="process.html" class="nav-link">Process</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#" class="btn btn-secondary btn-sm" data-wa="Hi Simmico, I would like to get in touch." target="_blank" rel="noopener">
+        <span class="status-dot green"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+      <a href="contact.html" class="btn btn-primary btn-sm">
+        <span>Get in Touch</span>
+      </a>
+    </div>
+  </div>
 </header>
 
-<section class="page-header">
-  <div class="container">
-    <h1>Get in touch</h1>
-    <p class="intro">We're based in Cape Town. Reach us via WhatsApp, email, or phone — whichever works best for you. We typically respond within one business day.</p>
+<!-- 2. SUBPAGE HERO -->
+<section class="subpage-hero">
+  <div class="container text-center" style="max-width: 860px;">
+    <div class="badge-pill">
+      <span>Direct Communication</span>
+    </div>
+    <h1 style="margin-bottom: 1.25rem;">
+      Speak directly with the team.
+    </h1>
+    <p class="lead">
+      No sales gatekeepers, no ticketing queues, and no contact forms. Reach our engineers and strategists directly through your preferred channel.
+    </p>
   </div>
 </section>
 
-<!-- Contact Methods -->
-<section class="section">
+<!-- 3. DIRECT ACTION CHANNELS (NO FORM) -->
+<section class="section" style="padding-top: 1rem; padding-bottom: 5rem;">
   <div class="container">
-    <div class="contact-grid">
-
-      <div class="contact-card">
-        <div class="cc-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    
+    <div class="direct-channels-grid">
+      
+      <!-- Channel 1: WhatsApp -->
+      <div class="channel-action-card whatsapp">
+        <span class="channel-badge fast">Fastest Response</span>
+        <div class="channel-big-icon whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
         </div>
-        <h4>WhatsApp</h4>
-        <p style="margin-bottom:1.25rem;">The quickest way to reach us. Send a message and we'll get back to you shortly.</p>
-        <a href="#" class="btn btn-whatsapp" data-wa="Hi, I'd like to discuss a project with Simmico.">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Message on WhatsApp
+        <h3>WhatsApp Direct</h3>
+        <p>Instant chat with our lead engineer and strategists. Ideal for quick scoping, questions, or reviewing bottlenecks.</p>
+        <a href="#" class="btn btn-primary btn-full" data-wa="Hi Simmico, I would like to discuss a project with your team." target="_blank" rel="noopener">
+          <span>Message on WhatsApp</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
 
-      <div class="contact-card">
-        <div class="cc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <!-- Channel 2: Phone Call -->
+      <div class="channel-action-card">
+        <span class="channel-badge" style="background:rgba(249, 115, 22, 0.12); color:var(--secondary);">Mon to Fri &bull; 08:00 - 17:00</span>
+        <div class="channel-big-icon orange">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6.08 6.08l.97-1.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
         </div>
-        <h4>Email</h4>
-        <p style="margin-bottom:1.25rem;">For detailed enquiries, proposals, or if you'd prefer to put things in writing.</p>
-        <a href="#" class="btn btn-primary" data-mailto>riolyng@simmico.co.za</a>
+        <h3>Direct Phone Call</h3>
+        <p>Call our Cape Town office directly to discuss custom software development, integrations, or marketing requirements.</p>
+        <a href="tel:+27833598843" class="btn btn-secondary btn-full" data-tel>
+          <span>Call +27 83 359 8843</span>
+        </a>
       </div>
 
-      <div class="contact-card">
-        <div class="cc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6.08 6.08l.97-1.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <!-- Channel 3: Email -->
+      <div class="channel-action-card">
+        <span class="channel-badge" style="background:rgba(20, 184, 166, 0.12); color:var(--primary);">Specs &bull; RFPs &bull; NDAs</span>
+        <div class="channel-big-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
         </div>
-        <h4>Phone</h4>
-        <p style="margin-bottom:1.25rem;">Available during business hours, Monday to Friday, 8am to 5pm SAST.</p>
-        <a href="#" class="btn btn-outline" data-tel><span data-cfg="phone">+27 83 359 8843</span></a>
+        <h3>Direct Email</h3>
+        <p>Send project briefs, process flowcharts, RFP documents, or request a mutual Non-Disclosure Agreement.</p>
+        <a href="mailto:riolyng@simmico.co.za" class="btn btn-secondary btn-full" data-mailto>
+          <span>Email riolyng@simmico.co.za</span>
+        </a>
       </div>
 
-      <div class="contact-card">
-        <div class="cc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h4>Location</h4>
-        <p style="margin-bottom:0.5rem;"><span data-cfg="address">Cape Town, South Africa</span></p>
-        <p style="font-size:0.85rem;">We work with clients nationally. Most of our work is delivered remotely, with on-site visits where required.</p>
-      </div>
+    </div>
 
+    <!-- Location & Operations Bar -->
+    <div class="location-info-bar">
+      <div class="location-info-item">
+        <h4>Base Location</h4>
+        <p style="color:var(--text-muted);"><span data-cfg="address">Cape Town, South Africa</span></p>
+      </div>
+      <div class="location-info-item">
+        <h4>Coverage</h4>
+        <p style="color:var(--text-muted);">South Africa, UK, Europe and Global Aligned Timezones</p>
+      </div>
+      <div class="location-info-item">
+        <h4>Turnaround</h4>
+        <p style="color:var(--text-muted);">Within 24 business hours on all enquiries</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 4. WHAT HAPPENS NEXT -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 3rem auto;">
+      <div class="badge-pill">
+        <span>Transparent Process</span>
+      </div>
+      <h2>What happens when you reach out</h2>
+      <p>A direct, transparent progression from conversation to execution.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="step-num">01</div>
+        <h4>Initial Review (24h)</h4>
+        <p>We analyze your workflow bottlenecks, software requirements, or marketing goals within 24 business hours.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">02</div>
+        <h4>Scoping Call</h4>
+        <p>A focused 20-minute discussion directly with a senior builder or strategist to clarify technical details.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">03</div>
+        <h4>Fixed Blueprint</h4>
+        <p>You receive a transparent scope document with fixed milestones, deliverables, and clear timelines.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- What to include -->
-<section class="section-sm" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+<!-- 5. FOOTER -->
+<footer class="site-footer">
   <div class="container">
-    <div style="max-width:660px;">
-      <span class="section-label">Before you reach out</span>
-      <h2 style="margin-bottom:1rem;">What to include in your message</h2>
-      <p style="margin-bottom:2rem;">The more specific you are, the faster we can give you a useful response. You don't need a polished brief — just give us:</p>
-      <div class="features-grid">
-        <div class="feature-item">
-          <span class="fi-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
-          </span>
-          <span>What you're trying to do or solve</span>
-        </div>
-        <div class="feature-item">
-          <span class="fi-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
-          </span>
-          <span>Whether it's IT, Marketing, or both</span>
-        </div>
-        <div class="feature-item">
-          <span class="fi-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
-          </span>
-          <span>Any timing requirements or deadlines</span>
-        </div>
-        <div class="feature-item">
-          <span class="fi-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
-          </span>
-          <span>A rough sense of budget if you have one</span>
-        </div>
+    <div class="footer-grid-5">
+      <div class="footer-brand-col">
+        <a href="index.html" class="brand-logo" style="margin-bottom:0.75rem;">
+          Simmico
+        </a>
+        <p>Simmico delivers custom software engineering, workflow automation, and strategic marketing solutions that eliminate operational friction and accelerate growth.</p>
       </div>
-    </div>
-  </div>
-</section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="flogo"><span class="lp">Simmi</span><span class="ls">co</span></div>
-        <p>IT and Marketing, built as one. One partner for your technology and growth needs.</p>
-      </div>
       <div class="footer-col">
-        <h5>IT Services</h5>
+        <h5>Software &amp; Automation</h5>
         <ul>
-          <li><a href="/it/web-development.html">Web Development</a></li>
-          <li><a href="/it/app-development.html">App Development</a></li>
-          <li><a href="/it/ai-automation.html">AI &amp; Automation</a></li>
-          <li><a href="/it/cloud-infrastructure.html">Cloud &amp; Infrastructure</a></li>
-          <li><a href="/it/cybersecurity.html">Cybersecurity</a></li>
-          <li><a href="/it/support-admin.html">IT Support &amp; Admin</a></li>
-          <li><a href="/it/software-integration.html">Software Integration</a></li>
-          <li><a href="/it/network-systems.html">Network &amp; Systems</a></li>
+          <li><a href="services.html">Internal Business Portals</a></li>
+          <li><a href="services.html">Workflow Automation</a></li>
+          <li><a href="services.html">API &amp; System Integration</a></li>
+          <li><a href="services.html">Automated Document Pipelines</a></li>
+          <li><a href="services.html">Database Architecture</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
-        <h5>Marketing</h5>
+        <h5>Marketing &amp; Design</h5>
         <ul>
-          <li><a href="/marketing/brand-strategy.html">Brand Strategy</a></li>
-          <li><a href="/marketing/digital-marketing.html">Digital Marketing</a></li>
-          <li><a href="/marketing/content-creation.html">Content Creation</a></li>
-          <li><a href="/marketing/social-media.html">Social Media</a></li>
-          <li><a href="/marketing/seo-performance.html">SEO Performance</a></li>
-          <li><a href="/marketing/paid-advertising.html">Paid Advertising</a></li>
-          <li><a href="/marketing/campaign-management.html">Campaign Management</a></li>
-          <li><a href="/marketing/photography-video.html">Photography &amp; Video</a></li>
+          <li><a href="services.html">Marketing Strategy</a></li>
+          <li><a href="services.html">Brand Identity &amp; Logos</a></li>
+          <li><a href="services.html">Graphic Design &amp; Decks</a></li>
+          <li><a href="services.html">Digital Campaigns</a></li>
+          <li><a href="services.html">Performance Optimization</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/it/index.html">IT Hub</a></li>
-          <li><a href="/marketing/index.html">Marketing Hub</a></li>
+          <li><a href="about.html">About Simmico</a></li>
+          <li><a href="solutions.html">What We Solve</a></li>
+          <li><a href="services.html">Services Overview</a></li>
+          <li><a href="process.html">Delivery Process</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Direct Contact</h5>
+        <ul>
+          <li><a href="tel:+27833598843" data-tel><span data-cfg="phone">+27 83 359 8843</span></a></li>
+          <li><a href="mailto:riolyng@simmico.co.za" data-mailto><span data-cfg="email">riolyng@simmico.co.za</span></a></li>
+          <li><span style="color:var(--text-muted); font-size:0.85rem;"><span data-cfg="address">Cape Town, South Africa</span></span></li>
+          <li><a href="#" data-wa="Hi Simmico, let us talk about a project." style="color:var(--primary); font-weight:600;">WhatsApp Direct &rarr;</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+
+    <div class="footer-bottom-row">
       <p>&copy; <span id="footer-year"></span> <span data-cfg="companyName">Simmico</span>. All rights reserved.</p>
-      <a href="#" data-mailto>hello@simmico.co.za</a>
+      <p style="color:var(--text-subtle);">Cape Town, South Africa &bull; Available Globally</p>
     </div>
   </div>
 </footer>
 
-<nav class="bottom-nav" aria-label="Main navigation">
-  <a href="/index.html" class="bnav-item">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+<!-- 6. MOBILE DOCK -->
+<nav class="mobile-bottom-dock" aria-label="Mobile Navigation">
+  <a href="index.html" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     <span>Home</span>
   </a>
-  <a href="/it/index.html" class="bnav-item">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-    <span>IT</span>
+  <a href="solutions.html" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+    <span>Solutions</span>
   </a>
-  <a href="/marketing/index.html" class="bnav-item">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-    <span>Marketing</span>
+  <a href="services.html" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    <span>Services</span>
   </a>
-  <a href="/about.html" class="bnav-item">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+  <a href="about.html" class="dock-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="1.2" fill="currentColor" stroke="none"/></svg>
     <span>About</span>
   </a>
-  <a href="/contact.html" class="bnav-item">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <a href="contact.html" class="dock-item active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     <span>Contact</span>
   </a>
 </nav>
 
-<script src="/js/config.js"></script>
-<script src="/js/app.js"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

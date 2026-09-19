@@ -1,13 +1,13 @@
 {
-  "name": "Simmico",
+  "name": "Simmico | Custom Software, Automation & Marketing Solutions",
   "short_name": "Simmico",
-  "description": "IT and Marketing, built as one.",
-  "start_url": "/",
+  "description": "Practical custom software, workflow automation, marketing strategies and graphic design.",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#1f2b33",
-  "theme_color": "#72c9bf",
+  "background_color": "#0b1219",
+  "theme_color": "#14b8a6",
   "icons": [
-    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
