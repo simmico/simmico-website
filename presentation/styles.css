@@ -1,0 +1,1296 @@
+/* ==========================================================================
+   MINK LUXURY INTERIORS — PECANWOOD ESTATE PRESENTATION
+   Editorial Quiet-Luxury Design System (Matched to Row 2 Business Card)
+   ========================================================================== */
+
+:root {
+  /* Core Palette — Matched to Mink Row 2 Card & Palette */
+  --bg-linen: #F1ECE4;
+  --bg-linen-deep: #E6DFD3;
+  --bg-card: #FAF8F5;
+  --bg-white: #FFFFFF;
+  --ink-primary: #181715;
+  --ink-secondary: #4A4640;
+  --ink-muted: #787268;
+  --gold-accent: #B69863;
+  --gold-soft: rgba(182, 152, 99, 0.18);
+  --basil-accent: #5C6446;
+  --border-hairline: rgba(24, 23, 21, 0.10);
+  --border-strong: rgba(24, 23, 21, 0.20);
+  --shadow-soft: 0 12px 36px -8px rgba(24, 23, 21, 0.07), 0 4px 12px -2px rgba(24, 23, 21, 0.04);
+  --shadow-elevated: 0 24px 60px -12px rgba(24, 23, 21, 0.16);
+
+  /* Typography */
+  --font-sans: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+
+  /* Layout */
+  --topbar-h: 60px;
+  --bottombar-h: 48px;
+  --rail-w: 64px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-linen);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ==========================================================================
+   View Transitions API — Directional Slide Navigation
+   (Following modern-web-guidance: directional-navigation-transitions)
+   ========================================================================== */
+
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-to-right {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+::view-transition-group(root) {
+  animation: 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+html:active-view-transition-type(forward)::view-transition-old(root) {
+  animation-name: slide-to-left;
+}
+
+html:active-view-transition-type(forward)::view-transition-new(root) {
+  animation-name: slide-from-right;
+}
+
+html:active-view-transition-type(backward)::view-transition-old(root) {
+  animation-name: slide-to-right;
+}
+
+html:active-view-transition-type(backward)::view-transition-new(root) {
+  animation-name: slide-from-left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root) {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   App Shell & Top Navigation Bar
+   ========================================================================== */
+
+.deck-shell {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+.topbar {
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(241, 236, 228, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-hairline);
+  z-index: 30;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.brand-Lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--ink-primary);
+  padding: 4px 0;
+}
+
+.brand-Lockup img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--border-strong);
+}
+
+.brand-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--ink-primary);
+  white-space: nowrap;
+}
+
+.brand-subtitle {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+/* Section Jump Pills */
+.room-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 4px 0;
+}
+
+.room-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.room-pill {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.room-pill:hover {
+  color: var(--ink-primary);
+  background: rgba(24, 23, 21, 0.04);
+}
+
+.room-pill.active {
+  background: var(--ink-primary);
+  color: var(--bg-linen);
+  border-color: var(--ink-primary);
+}
+
+/* Right Controls */
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: var(--ink-primary);
+  color: var(--bg-linen);
+  border-color: var(--ink-primary);
+}
+
+.icon-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ==========================================================================
+   Slide Viewport & Architectural Frame
+   ========================================================================== */
+
+.slides-viewport {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: calc(100% - var(--topbar-h) - var(--bottombar-h));
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-linen);
+}
+
+.slide.active {
+  display: grid;
+  grid-template-columns: var(--rail-w) 1fr;
+}
+
+.slide.slide--fullbleed.active {
+  display: flex;
+}
+
+/* Oversized Subtle M. Watermark (Matched to Row 2 Business Card Back) */
+.slide-watermark {
+  position: absolute;
+  left: 38px;
+  bottom: -40px;
+  width: min(52vw, 680px);
+  height: auto;
+  opacity: 0.045;
+  pointer-events: none;
+  z-index: 0;
+  filter: invert(1);
+}
+
+/* Left Architectural Sidebar Rail (Replaces the old black sidebar) */
+.arch-rail {
+  width: var(--rail-w);
+  height: 100%;
+  border-right: 1px solid var(--border-hairline);
+  background: rgba(250, 248, 245, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  z-index: 2;
+}
+
+.arch-rail-logo {
+  width: 28px;
+  height: auto;
+  opacity: 0.85;
+}
+
+.arch-rail-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.65rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.arch-rail-vertical strong {
+  color: var(--ink-primary);
+  font-weight: 400;
+}
+
+.arch-rail-num {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--gold-accent);
+  letter-spacing: 0.08em;
+}
+
+/* Main Slide Canvas */
+.slide-canvas {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: clamp(18px, 2.6vh, 34px) clamp(24px, 3.5vw, 52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(12px, 1.8vh, 22px);
+  overflow: hidden;
+}
+
+/* Slide Header */
+.slide-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: 10px;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.slide-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.slide-eyebrow {
+  font-size: 0.66rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  font-weight: 400;
+}
+
+.slide-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2.5vw, 2.35rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.08;
+  color: var(--ink-primary);
+  text-transform: uppercase;
+}
+
+.slide-spec-note {
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  max-width: 520px;
+  text-align: right;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   Slide 1 — Cover Hero (Full-Bleed bg.png + Mink Black Logo)
+   ========================================================================== */
+
+.cover-hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cover-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.02);
+  transition: transform 8s ease;
+}
+
+.slide.active .cover-bg-img {
+  transform: scale(1);
+}
+
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(241, 236, 228, 0.72) 0%,
+    rgba(241, 236, 228, 0.42) 55%,
+    rgba(241, 236, 228, 0.18) 100%
+  );
+}
+
+.cover-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(32px, 5vh, 56px) clamp(36px, 6vw, 84px);
+  background: rgba(248, 245, 240, 0.68);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 30px 80px -20px rgba(24, 23, 21, 0.15);
+  max-width: 680px;
+  width: 90%;
+}
+
+.cover-logo {
+  width: clamp(230px, 28vw, 350px);
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.cover-rule {
+  width: 64px;
+  height: 1px;
+  background: var(--ink-primary);
+  opacity: 0.35;
+  margin-bottom: 22px;
+}
+
+.cover-estate-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  margin-bottom: 8px;
+}
+
+.cover-estate-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+  margin-bottom: 18px;
+}
+
+.cover-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  margin-bottom: 30px;
+}
+
+.cover-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: var(--ink-primary);
+  color: var(--bg-linen);
+  border: 1px solid var(--ink-primary);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cover-cta:hover {
+  background: transparent;
+  color: var(--ink-primary);
+}
+
+/* ==========================================================================
+   Gallery Layouts & Cards
+   ========================================================================== */
+
+.slide-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  gap: clamp(14px, 1.8vw, 24px);
+}
+
+/* Grid Presets */
+.grid-palette {
+  grid-template-columns: 1.05fr 1.35fr 0.85fr;
+}
+
+.grid-2col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-asymmetric-left {
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.grid-asymmetric-right {
+  grid-template-columns: 1fr 1.25fr;
+}
+
+.grid-3col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.6vh, 20px);
+  min-height: 0;
+}
+
+.row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 1.5vw, 18px);
+  flex: 1;
+  min-height: 0;
+}
+
+.row-split-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Gallery Card */
+.gallery-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+  flex: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.gallery-card:hover {
+  border-color: var(--gold-accent);
+  box-shadow: var(--shadow-elevated);
+}
+
+.gallery-card--clean {
+  background: var(--bg-white);
+}
+
+.card-media {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-in;
+  background: #F6F3EE;
+}
+
+.gallery-card--clean .card-media {
+  background: #FFFFFF;
+  padding: 14px;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-media--contain img {
+  object-fit: contain;
+  padding: 10px;
+}
+
+.gallery-card:hover .card-media img {
+  transform: scale(1.03);
+}
+
+.zoom-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(24, 23, 21, 0.65);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.gallery-card:hover .zoom-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-caption {
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.card-label {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+}
+
+.card-meta {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  text-align: right;
+}
+
+/* ==========================================================================
+   Slide 2 — Signature Swatches Strip
+   ========================================================================== */
+
+.swatches-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-soft);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.swatches-heading {
+  text-align: center;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: 10px;
+}
+
+.swatches-heading h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.swatches-heading p {
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
+
+.swatch-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.swatch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.swatch-circle {
+  width: clamp(44px, 4.4vw, 64px);
+  height: clamp(44px, 4.4vw, 64px);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(24, 23, 21, 0.08);
+  border: 1px solid rgba(24, 23, 21, 0.12);
+}
+
+.swatch-circle--champagne {
+  background: linear-gradient(135deg, #EBD8C0 0%, #CFAF8C 52%, #F3E6D4 100%);
+}
+
+.swatch-circle--basil {
+  background: linear-gradient(135deg, #656E4B 0%, #4E5638 100%);
+}
+
+.swatch-circle--black {
+  background: linear-gradient(135deg, #232220 0%, #0E0E0D 100%);
+}
+
+.swatch-circle--gold {
+  background: linear-gradient(135deg, #E5C88D 0%, #B89047 50%, #F0DBA8 100%);
+}
+
+.swatch-circle--ivory {
+  background: linear-gradient(135deg, #FBF8F1 0%, #EDE6D8 100%);
+}
+
+.swatch-name {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+}
+
+.swatch-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+}
+
+/* Spec Callout Banner */
+.spec-callout {
+  background: rgba(24, 23, 21, 0.035);
+  border-left: 2px solid var(--gold-accent);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.spec-callout-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+  font-weight: 400;
+}
+
+.spec-callout-tag {
+  font-size: 0.64rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Slide 16 — Closing & Row 2 Business Card Showcase
+   ========================================================================== */
+
+.contact-stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(20px, 4vh, 48px);
+  gap: clamp(20px, 3.2vh, 36px);
+  position: relative;
+}
+
+.business-cards-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 44px);
+  width: min(1080px, 94%);
+  aspect-ratio: 2.15 / 0.68;
+  max-height: 56vh;
+}
+
+.bcard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 28px 64px -16px rgba(24, 23, 21, 0.18), 0 4px 16px rgba(24, 23, 21, 0.06);
+  border: 1px solid rgba(24, 23, 21, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Row 2 Front Card */
+.bcard--front {
+  background: var(--bg-linen);
+}
+
+.bcard--front .bcard-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+}
+
+.bcard--front .bcard-veil {
+  position: absolute;
+  inset: 0;
+  background: rgba(241, 236, 228, 0.32);
+}
+
+.bcard--front .bcard-logo {
+  position: relative;
+  z-index: 2;
+  width: 56%;
+  max-width: 280px;
+  height: auto;
+}
+
+/* Row 2 Back Card */
+.bcard--back {
+  background: #EFEBE3;
+  padding: clamp(24px, 3.5vw, 44px);
+  justify-content: space-between;
+  text-align: center;
+}
+
+.bcard--back .bcard-watermark {
+  position: absolute;
+  left: -4%;
+  top: -6%;
+  height: 112%;
+  width: auto;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.bcard-person {
+  position: relative;
+  z-index: 2;
+  margin-top: 8px;
+}
+
+.bcard-name {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(1.3rem, 2.2vw, 2.1rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+  margin-bottom: 8px;
+}
+
+.bcard-phone {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(0.95rem, 1.4vw, 1.3rem);
+  letter-spacing: 0.1em;
+  color: var(--ink-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.bcard-phone:hover {
+  border-color: var(--ink-primary);
+}
+
+.bcard-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.bcard-mink {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+}
+
+.bcard-motto {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(0.58rem, 0.85vw, 0.75rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border: 1px solid var(--ink-primary);
+  background: var(--ink-primary);
+  color: var(--bg-linen);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.contact-btn--outline {
+  background: transparent;
+  color: var(--ink-primary);
+}
+
+.contact-btn:hover {
+  background: var(--gold-accent);
+  border-color: var(--gold-accent);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Bottom Control Bar & Progress Indicator
+   ========================================================================== */
+
+.bottombar {
+  height: var(--bottombar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(241, 236, 228, 0.92);
+  border-top: 1px solid var(--border-hairline);
+  z-index: 30;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.progress-track {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(24, 23, 21, 0.06);
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--gold-accent);
+  width: 6.25%;
+  transition: width 0.35s ease;
+}
+
+.bottom-meta {
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.slide-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-card);
+  color: var(--ink-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-arrow:hover:not(:disabled) {
+  background: var(--ink-primary);
+  color: var(--bg-linen);
+  border-color: var(--ink-primary);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.slide-counter {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  min-width: 64px;
+  text-align: center;
+  color: var(--ink-primary);
+}
+
+/* ==========================================================================
+   Modal Dialogs: Lightbox Zoom & Overview Grid
+   (Following modern-web-guidance: light-dismiss-a-dialog)
+   ========================================================================== */
+
+dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 94vw;
+  max-height: 92vh;
+  margin: auto;
+  color: var(--ink-primary);
+}
+
+dialog::backdrop {
+  background-color: rgba(18, 17, 15, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+.lightbox-frame {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-elevated);
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  max-height: 88vh;
+  overflow: hidden;
+}
+
+.lightbox-img-wrap {
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-height: calc(88vh - 60px);
+}
+
+.lightbox-img-wrap img {
+  max-width: 84vw;
+  max-height: calc(84vh - 80px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--bg-linen);
+  border-top: 1px solid var(--border-hairline);
+  gap: 20px;
+}
+
+.lightbox-caption {
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.dialog-close-btn {
+  padding: 6px 14px;
+  background: var(--ink-primary);
+  color: var(--bg-linen);
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Overview Grid Modal */
+.overview-frame {
+  background: var(--bg-linen);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-elevated);
+  width: min(1240px, 92vw);
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.overview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 26px;
+  border-bottom: 1px solid var(--border-hairline);
+  background: var(--bg-card);
+}
+
+.overview-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.overview-grid {
+  padding: 24px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.overview-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: left;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+
+.overview-item:hover,
+.overview-item.active {
+  border-color: var(--ink-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.overview-thumb {
+  height: 135px;
+  width: 100%;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.overview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overview-meta {
+  padding: 10px 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.overview-num {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--gold-accent);
+  font-weight: 600;
+}
+
+.overview-name {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Responsive Design (Tablet & Mobile Support)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .brand-subtitle,
+  .bottom-meta--hint {
+    display: none;
+  }
+
+  .slide.active {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-rail {
+    display: none;
+  }
+
+  .slide-canvas {
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+
+  .grid-palette,
+  .grid-2col,
+  .grid-asymmetric-left,
+  .grid-asymmetric-right,
+  .grid-3col {
+    grid-template-columns: 1fr;
+  }
+
+  .card-media {
+    min-height: 240px;
+  }
+
+  .business-cards-showcase {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+    max-height: none;
+  }
+
+  .bcard {
+    min-height: 220px;
+  }
+}
+
+@media print {
+  html, body, .deck-shell, .slides-viewport {
+    height: auto;
+    overflow: visible;
+  }
+  .topbar, .bottombar {
+    display: none !important;
+  }
+  .slide {
+    display: grid !important;
+    grid-template-columns: var(--rail-w) 1fr;
+    height: 100vh;
+    page-break-after: always;
+  }
+}
