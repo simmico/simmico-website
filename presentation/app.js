@@ -1,5 +1,5 @@
 /**
- * Mink Luxury Interiors — Pecanwood Estate Interactive Presentation
+ * Mink Luxury Interiors - Pecanwood Estate Interactive Presentation
  */
 
 (function () {

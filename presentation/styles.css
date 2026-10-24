@@ -1,10 +1,10 @@
 /* ==========================================================================
-   MINK LUXURY INTERIORS — PECANWOOD ESTATE PRESENTATION
+   MINK LUXURY INTERIORS - PECANWOOD ESTATE PRESENTATION
    Editorial Quiet-Luxury Design System (Matched to Row 2 Business Card)
    ========================================================================== */
 
 :root {
-  /* Core Palette — Matched to Mink Row 2 Card & Palette */
+  /* Core Palette - Matched to Mink Row 2 Card & Palette */
   --bg-linen: #F1ECE4;
   --bg-linen-deep: #E6DFD3;
   --bg-card: #FAF8F5;
@@ -50,7 +50,7 @@ html, body {
 }
 
 /* ==========================================================================
-   View Transitions API — Directional Slide Navigation
+   View Transitions API - Directional Slide Navigation
    (Following modern-web-guidance: directional-navigation-transitions)
    ========================================================================== */
 
@@ -400,7 +400,7 @@ html:active-view-transition-type(backward)::view-transition-new(root) {
 }
 
 /* ==========================================================================
-   Slide 1 — Cover Hero (Full-Bleed bg.png + Mink Black Logo)
+   Slide 1 - Cover Hero (Full-Bleed bg.png + Mink Black Logo)
    ========================================================================== */
 
 .cover-hero {
@@ -682,7 +682,7 @@ html:active-view-transition-type(backward)::view-transition-new(root) {
 }
 
 /* ==========================================================================
-   Slide 2 — Signature Swatches Strip
+   Slide 2 - Signature Swatches Strip
    ========================================================================== */
 
 .swatches-panel {
@@ -805,7 +805,7 @@ html:active-view-transition-type(backward)::view-transition-new(root) {
 }
 
 /* ==========================================================================
-   Slide 16 — Closing & Row 2 Business Card Showcase
+   Slide 16 - Closing & Row 2 Business Card Showcase
    ========================================================================== */
 
 .contact-stage {
@@ -1293,4 +1293,56 @@ dialog::backdrop {
     height: 100vh;
     page-break-after: always;
   }
+}
+
+
+/* Single-Column & Placeholder Layouts */
+.grid-1col {
+  grid-template-columns: 1fr;
+}
+
+.placeholder-stage {
+  flex: 1;
+  min-height: 0;
+  background: rgba(250, 248, 245, 0.72);
+  border: 1px dashed rgba(182, 152, 99, 0.55);
+  box-shadow: inset 0 0 0 8px var(--bg-card), var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 36px;
+  gap: 14px;
+}
+
+.placeholder-monogram {
+  width: 58px;
+  height: auto;
+  opacity: 0.25;
+  margin-bottom: 6px;
+}
+
+.placeholder-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+}
+
+.placeholder-sub {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+}
+
+.placeholder-desc {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  max-width: 440px;
+  line-height: 1.6;
 }
